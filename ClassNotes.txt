@@ -25,7 +25,7 @@ Github notes:
 	git add . will select everything new in a folder
 	git add index.html will only select 'index.html'
 
-	git commit will push the content inside the pseudo-box but it is not actually there & will ask for a message to let other users know what you have updated.
+	git commit -m "message" will push the content inside the pseudo-box but it is not actually there & will ask for a message to let other users know what you have updated.
 
 	git push -u origin master this will take the comit data and push it into github
 
