@@ -1,0 +1,106 @@
+The Box Model
+
+	Content Area: This is the area that contains the text/content
+	Padding Area: This is the area between the text/content & the border area
+	Border Area: This is the outer each of the box.
+	Margin Area: This is the area that goes beyond the border and pushes this box away from other boxes.
+
+	Overflow Property: 
+		overflow: visible / auto / hidden / scroll
+
+			visible - the default value, which allows content to extend beyond
+			container boundaries 
+
+			auto - adds a scrollbar as needed when content overflows
+
+			hidden - hides content that extends beyond the container 
+
+			scroll - adds a scrollbar at all times, even if unneeded
+
+Positioning: Elements have a position value of static by default:
+
+	Position Property:
+		position: static / relative / absolute / fixed
+
+	Using a value other than static causes an object to become a
+	positioned element	
+
+	Positioned elements may use the top, left, bottom, and right
+	properties for placement
+
+	Relative Positioning: Renders in the normal fow, then shifted via positioning properties
+
+		*HTML*
+		<article>
+	 		<h2>Sven's SnowshoeX<sup>2</sup></h2>
+		</article>
+
+		*CSS*
+		sup {
+			 font-size: 75%;
+			 line-height: 0;
+			 vertical-align: baseline;
+			 position: relative;
+			 top: -0.5em;
+		}
+
+	Absolute Positioning: Takes an element out of the normal fow for manual positioning
+	
+	*HTML*
+	<article>
+		 <h2>New Snowshoes</h2>
+		 <h3>By: Sven</h3>
+		 <p>This season's hot styles, available now!</p>
+	</article>	
+
+	*CSS*
+	h3 {
+ 		position: absolute;
+ 		right: 10px;
+ 		top: 10px;
+	}
+
+	Fixed Positioning: Afxes an element to a specifc place in the window, where it will
+	stay regardless of scrolling
+
+	*CSS*
+
+	.ski {
+		 position: fixed;
+		 right: 10px;
+		 top: 10px;
+	}
+
+Z-Index
+
+	Manually adjusting overlap: No z-index or equal z-index = overlap determined by placement
+	in DOM	
+
+	*HTML*
+	<article>
+ 		<img class="ski" src="ski.jpg" alt="Ski!" />
+ 		<img class="sled" src="sled.jpg" alt="Sled!" />
+	</article>
+
+	*CSS*
+	.ski, .sled {
+ 		z-index: 1;
+	}
+
+	Manually adjusting overlap: Higher values appear above lower values
+
+	*HTML*
+
+	<article>
+		<img class="ski" src="ski.jpg" alt="Ski!" />
+		<img class="sled" src="sled.jpg" alt="Sled!" />
+	</article>
+
+	*CSS*
+
+	.ski {
+ 		z-index: 1;
+	}
+
+	Manually adjusting overlap: Elements must be positioned for z-index to take efect. Use
+	relative if you're not interested in moving the object

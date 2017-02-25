@@ -1,0 +1,101 @@
+Pseudo Classes:
+
+	*HTML*
+		<ul>
+		 <li><a href="#lodging">Lodging</a></li>
+		 <li><a href="#rentals">Rentals</a></li>
+		 <li><a href="#lessons">Lessons</a></li>
+		</ul
+
+	*CSS*	
+
+		li {
+	 		border-bottom: 1px solid #aaa;
+		}
+	 		border-bottom: 0;
+		}
+
+	Colons allow you to conditionally select an element based on position or state
+
+	*CSS*
+
+		.twitter:hover, .twitter:focus {
+ 			background-position: 0 -100px;
+		}
+
+		.github:hover, .github:focus {
+ 			background-position: -100px -100px;
+		}
+
+	Zebra striping/Simplifying with nth-child:
+	
+	*HTML*
+	<ul>
+		 <li><a href="#lodging">Lodging</a></li>
+		 <li><a href="#rentals">Rentals</a></li>
+		 <li><a href="#lessons">Lessons</a></li>
+		 <li><a href="#menu">Menu</a></li>
+	</ul>	
+
+	*CSS*
+	li:nth-child(even) {
+		background-color: #444245;
+	}
+	
+	li:nth-child(odd) {
+
+	li:nth-child(an+b) {
+	*Matches items in intervals of a, starting with
+the element at position b (or 0, if b isn't set)*
+
+	li:nth-child(2n) { /* Even */
+	li:nth-child(2n+1) { /* Odd */
+
+	Useful class selectors: 
+
+	:hover / :focus / :active / :visited
+	:first-child / :last-child / :only-child
+	:nth-child() / :nth-of-type()	
+
+Pseudo Elements: 
+
+Ending the last paragraph with a decorative element:
+
+*HTML*
+<article>
+ <p>Coffee? Hah! Our cocoa is far better.</p>
+ <p>Visit from 4-5 for cocoa happy hour!&#x2744;</p>
+</article>	
+
+*CSS*
+article p:last-child:after {
+ content: '\2744';
+}
+
+	*Here we are putting a image after the last paragraph tag and we are adding it in the CSS rather than in the HTML.
+
+A selection of useful pseudo elements:
+
+:before / :after (both of these require IE8+ and need a content element)
+:first-letter / :first-line	
+
+
+*HTML*
+<blockquote>
+ Coffee? Hah! Our cocoa is far better.
+</blockquote>
+
+*CSS*
+blockquote:before {
+	content: '': *This content is empty, we just need to to use a pseudo element.
+	background: url(quote.png);
+	display: block;
+	height: 30px;
+	width: 30px;
+	position: absolute;
+	top: -5px;
+	left: -5px;
+}
+
+:before and :after effectively add two additional places
+per element on the page for styling

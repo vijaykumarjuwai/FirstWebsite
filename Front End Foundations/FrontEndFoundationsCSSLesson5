@@ -1,0 +1,73 @@
+div is short for division, and it’s a block-level tag that’s a generic way to group related content into sections on a page.
+
+	<body>
+		<div>
+			<h1>Recipe World</h1>
+			<ul class="nav">
+		</div>
+		<div>
+			<h2>Magic Cake</h2>	
+		</div>
+	</body>
+
+A common way to differentiate between <div> tags is to add a class.		
+
+	<body>
+		<div class="header">
+			<h1>Recipe World</h1>
+			<ul class="nav">
+		</div>
+		<div class="main-content">
+			<h2>Magic Cake</h2>	
+		</div>
+	</body>
+
+Classes will let use style each <div> differently
+
+In CSS we can now apply styles to each new <div>-Thus we can create style consistently across categories or divisions of content.
+
+	.header {
+		padding: 10px 10px 10px 10px;
+		background-color: #b56663
+	}
+
+	.header a {
+		color: #ffffff;
+	}
+
+	h1 {
+		color: #ffffff;
+	}
+
+There’s two main ways to center things, but the CSS you write depends
+on what you’re centering.
+
+		Centering 1:
+	If: you want to center an entire block-level tag
+
+	And: it is fixed-width
+
+	Then: set the left and right margins to auto	
+
+		.main-content{
+		width: 500px;
+		padding: 20px;
+		border: 1px solid #dddddd;
+		margin: 30px auto 0 auto
+		}	
+
+auto here means take as much space as you can.
+
+		Centering 2:
+	If: you want to center children inside a block-level tag
+
+	Then: set the text-align of the children to center	
+
+	h1 {
+		color: #ffffff;
+		margin: 0 0 15px 0;
+		text-align: center;
+	}
+
+d	
+				

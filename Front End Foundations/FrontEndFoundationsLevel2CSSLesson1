@@ -1,0 +1,84 @@
+CSS: Cascading Style Sheets: CSS is code that changes the appearance of HTML.
+	CSS are defined using selectors. 
+		Selectors selects HTML tags and then alter the HTML tag to change how the HTML looks. 
+			The simpliest way to select a tag is to write the name of a tag without the angle brackets.
+
+	selectors {
+		property: value;
+	}
+
+		Example: 
+		p {
+			text-decoration: underline;
+			color: red;
+		}
+			Here the "selector: is p, the first "property" is "text-decoration", the "value" of the "text-decoration" is "underline." The 2nd "property" is "color," the "value" of the "color" is "red"
+
+			Note: It is possible to have multiple properties applied to a single selector.
+
+			Selectors will select all matching tags on the page and apply properties. 
+
+		Example: 
+		p {
+			text-decoration: underline;
+			color: red;
+		}
+		
+		So in this case in the html all "p" will have this these values.	
+
+	A descendent selector can be used to select tags only if they are children of another tag.
+
+		<h3>Ingredients</h3>
+		<ul>
+			<li>2 eggs</li>
+			<li>1 pound of sugar</li>
+			<li>3 sticks of butter</li>
+		</ul>
+		
+		ul li {
+			font-size: 24px;
+		}	
+
+		In this example, this selector will only apply to li tags that are children of ul tags
+
+		TIP: read the selector list from right-to-left. The left-most selector is the parent, with children following to the right. 
+
+	A pseudo-selector is a modifier that can be added to a selector to select a tag only when a certain condition has occurred.	pseudo-selectors modify HTML based on an action or behavior.
+
+		a {
+			text-decoration: none;
+		}	
+			*Removes the underline from all links on a page*
+
+		a:hover {
+			text-decoration: underline;
+			color: darkred;
+		}	
+			*Adds an underline and changes the color of all links on a page ONLY when the mouse is over the link*
+
+	The :first-child pseudo-selector can be applied to narrow the amount of child tags selected		
+		<h3>Ingredients</h3>
+		<ol>
+			<li>2 eggs</li>
+			<li>1 pound of sugar</li>
+			<li>3 sticks of butter</li>
+		</ol>
+
+		ol li:first-child {
+			color: red;
+		}
+			*This will select only the 1st li tag*
+
+Where do we put CSS stuff?
+	One place you can put CSS is in a style tag that’s a child of the head tag.
+
+		<html>
+			<head>
+				<style type="text/css">
+					a {
+						color:red;
+					}
+				</style>
+					*The <style type> lets the browser know that CSS is coming*	
+
+

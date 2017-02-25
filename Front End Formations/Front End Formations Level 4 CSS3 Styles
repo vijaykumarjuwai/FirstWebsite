@@ -1,0 +1,273 @@
+		Border Radius
+		Box Shadow
+		Text Shadow
+		Box Sizing
+		Multiple Backgrounds Color
+		Opacity Gradients
+
+Border Radius: The border-radius property applies rounded corners to borders.
+
+	The base .box element we’ll be working with:
+		.box {
+		  background: grey;
+		  height: 50px;
+		  width: 200px;
+		}
+
+	Example Usage of the border-radius property:
+		.box {
+			border-top-left-radius: 15px;
+			border-top-right-radius: 15px;
+			border-bottom-right-radius: 15px;
+			border-bottom-left-radius: 15px;
+		}
+
+		.box {
+  			border-radius: 15px;
+		}
+
+		We can also simply use the "border-radius" tag to apply the same formatting to all sides of our box.
+
+		.box {
+  			border-radius: <top left> <top right> <bottom right> <bottom left>
+  			border-radius: 4px 15px 12px 10px;
+		}
+
+		We can also use 1 line of code to modify each part of the border separately.
+
+		You can also specify the border-radius value in percentages.
+
+		.box {
+  			border-radius: 50%;
+		}
+
+Box Shadow: The box-shadow property specifies a shadow on an element.
+
+		.box {
+  			box-shadow: 1px 2px 2px #000;
+		}	
+
+			box-shadow: <inset> <offset-x> <offset-y> <blur-radius> <spread-radius> <color>
+
+				<inset>	If it is not specified (which is the default), a drop shadow is created, rather than an inset shadow.
+
+				<offset-x> The shadow offset x value.
+
+				<offset-y> The shadow offset y value.
+
+				<blur-radius> The blur-radius alters the blur amount of the shadow, causing it to become bigger and lighter (with a larger value).
+
+				<spread-radius> The spread-radius causes the shadow to expand or shrink.
+
+				<color> The color of the shadow.
+
+			
+			You can specify multiple box-shadows via a comma-separated list:
+
+			.box {
+  				box-shadow:
+				    1px 1px 2px #000,
+				    inset 1px 1px 2px blue;
+				}
+
+			
+			You can also specify negative values:
+
+			.box {
+  				box-shadow: -1px -2px 2px #000;
+				}
+
+Text Shadow: The text-shadow property is very similar to box-shadow, but it applies the shadow to text.
+
+	Example usage of the text-shadow property:
+	<h1>I have a shadow!</h1>
+	h1 { text-shadow: 1px 2px 2px #000;
+	}
+
+	text-shadow: <offset-x> <offset-y> <blur-radius> <color>
+
+		<offset-x>: The shadow offset x value.
+		<offset-y>: The shadow offset y value.
+		<blur-radius>: The blur-radius alters the blur amount of the shadow, causing it to become bigger and lighter (with a larger value).
+		<color>:  The color of the shadow.
+
+	h1 {
+  		text-shadow: 1px 2px 2px #000;
+	}
+
+Box Sizing: The box-sizing property is used to change the default CSS box model, which is used to calculate widths and heights of given elements.
+
+	The CSS box model references the design and layout of given HTML elements
+
+	Each HTML element is a “box,” which consists of margins, borders, padding, and the content of the element
+
+	The “box model” refers to how those properties are calculated in conjunction with one another in order to set the element’s dimensions	
+ 	
+
+	The content of the box is where the actual content, the text and images, is located:
+
+	The border goes around the padding and content:
+
+	The margin clears the area around the border:
+
+	Calculating the width of the .box:
+	 	.box {
+		  border: 2px solid black;
+		  margin: 20px;
+		  padding: 10px;
+		  width: 300px;
+		}
+
+	Note the margin is not part of the box size:
+	
+	The box-sizing property is used to change the default CSS box model, which is used to calculate widths and heights of given elements.
+
+	There are three different values for box-sizing:
+		content-box 
+		padding-box 
+		border-box	
+
+	CONTENT-BOX: This is the default value. The width and height are measured by including only the content, but not the border, margin, or padding.
+	
+	PADDING-BOX: The width and height include the padding, but do not include the border or margin.
+
+	BORDER-BOX: The width and height include the padding and border, but not the margin.
+
+Multiple Backgrounds: CSS3 allows you to apply multiple backgrounds to an element. They are stacked in the order in which you specify them.
+
+	First, specify your background-images in a comma-delimited list:
+	.element {
+  		background-image: url(bg1.png), url(bg2.png);
+	}	
+
+	Then specify the background-position for each, in order:
+	element {
+	  background-image: url(bg1.png), url(bg2.png);
+	  background-position: top left, center right;
+	}
+
+	Finally, specify the background-repeat for each:
+	.element {
+	  background-image: url(bg1.png), url(bg2.png);
+	  background-position: top left, center right;
+	  background-repeat: no-repeat, no-repeat;
+	}
+
+	You can also use the shorthand background:
+	.element {
+  		background:
+		    url(bg1.png) top left no-repeat,
+		    url(bg2.png) center right no-repeat;
+	}
+
+Color: CSS3 provides multiple ways to work with color: 
+	RGBa 
+	HSLa	
+
+	RGBa: RGB represents the three additive primary colors, red, green, and blue. In CSS3, we can also pass the alpha value (the “a” in RGBa), which represents the opacity of a color.
+
+	Example usage of rgba: 
+		.element {
+  			color: rgba(0, 0, 0, 0.75);
+		}
+
+		Here the 1st 3 # represent the red, blue, green and the final % represents the opacity of the color.
+
+	HSLa: CSS3 also adds HSLa (Hue, Saturation, Lightness). In addition to providing the hue, saturation, and lightness values, you can specify the alpha value for the opacity of the color.	
+
+	Example usage of hsla:
+		.element {
+		  color: hsla(240, 100%, 50%, 0.75);
+		}
+
+		Here the 1st # represents the color, the 2nd # represents the saturation, the 3rd # represents the lightness, the 4th # represens the opacity.
+
+	HSLa is more intuitive than RGBa, and it’s much easier to make color adjustments on the fly.
+	
+Opacity: CSS3 allows you to specify the opacity of an element using the opacity property.
+
+	.element {
+	  opacity: 0.45;
+	}
+
+	Opacity on an element affects all elements that are nested inside.
+
+	*HTML*
+	<div class="element">
+  		<h2>Hello.</h2>
+	</div>	
+
+	*CSS*
+	.element {
+  		background: url(bg.jpg) center no-repeat;
+  		opacity: 0.45;
+	}	
+
+Gradients: CSS3 provides the ability to create gradients, smooth transitions between two or more colors.
+
+	There are two types of gradients that browsers support:
+		Linear gradients 
+		Radial gradients
+
+		Linear gradients: To create a linear gradient, we need to specify the starting point, the ending point, and optional stop-color points.
+
+			*CSS*
+			.element {
+	  			background: linear-gradient(to bottom, red, yellow);
+
+	  		Example usage of a linear-gradient:
+	  			linear-gradient(<angle> to <side-or-corner>, <color-stop>s)
+
+	  				<angle> to <side-or-corner>: We can specify the direction through an angle or a keyword.
+	  					<angle> The angle is generally a degree (e.g. 45deg).
+	  					<side-or-corner>  The side-or-corner consists of two keywords:
+	  						Horizontal: left or right
+	  						Verticle: top or bottom
+	  					<color-stop>  The color-stops consists of a color and an optional stop position, which can be either a percentage or length.
+	  					
+	  			.element {
+	  				background: linear-gradient(to bottom, red, yellow);
+				}	
+
+					Here:  The side-or-corner is bottom, which makes the gradient go from the top to the bottom.
+
+			Keywords: 					
+			
+			to top: 0deg
+			to bottom: 180deg
+			to right: 270deg
+			to left 90deg
+
+		Radial Gradient: A radial gradient, unlike a linear gradient, creates a gradient that extends from an origin, the center of the element, extending outward in a circular or elliptical shape.
+		
+		A radial-gradient consists of:
+			The center
+			The ending shape contour and position 
+			Color stops	
+
+		Example usage of a radial-gradient in its simplest form:
+			.element {
+  				background:
+    				radial-gradient(aqua, blue);
+			}
+
+		radial-gradient(<shape> <size> at <position>, <color-stop>s)	
+			<shape> <size>: Specify the shape or size of the gradient.
+			
+			<shape> The shape of the gradient; circle or ellipse. The default is ellipse.
+			
+			<size> The size of the gradient, which consists of keywords. Size can also be a length or a percentage.
+
+				<size> Keywords: closest-side, closest-corner, farthest-side, farthest-corner
+					Note: the default value is farthest-corner
+
+			at <position>: Same as background-position. Default is center.
+
+			<color-stop>: The color-stops consist of a color and an option stop position, which can be either a percentage or length.
+
+			*CSS*
+			.element {
+  				background: radial-gradient(circle at top left, aqua, blue);
+			}		
+
+

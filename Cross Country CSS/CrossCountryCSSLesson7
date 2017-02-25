@@ -1,0 +1,72 @@
+Image Replacement: When using an image as a logo it is important to also have plan HTML text available for a screen reader or if the image wont display-but generally want this HTML text to remain hidden because it is visually unattractive. This is dont by including the label in the HTML but in the CSS having a huge "text-indent" which will shift the image out of the view of the user.
+
+	Text-indent hides the placeholder text: 
+
+	*HTML*
+	<a href="#" class="logo">Sven's Snowshoe Emporium </a>
+
+	*CSS*
+
+	.logo {
+ 		background: url(logo.png);
+ 		display: block;
+ 		height: 100px;
+ 		width: 200px;
+ 		text-indent: -9999px;
+	}
+
+Sprites: *When you have the image change when you hover over it. This is best done by having 2 images simultaneously loaded 1 above othe other, then simply shifting the display down to reveal the different image once the hover is happening. The total height of the new image is 200% the height of each individual image.
+
+Let's combine the images into one file:
+
+Using background-position:
+
+	*CSS*
+
+	.logo {
+		 background: url(logo.png);
+		 display: block;
+		 height: 100px;
+		 width: 200px;
+		 text-indent: -9999px;
+	}
+	.logo:hover, .logo:focus {
+		background-position: 0 -100px;
+	}
+		*With the background position applied the orientation does not shift on the X-axis (0) the Y-axis shifts down 100px (-100px)
+
+	Multiple images: Here we can have 2 images loaded simultaneoulsy for display	
+
+		*CSS*
+		.twitter, .github {
+			 background: url(social.png);
+			 display: block;
+			 height: 100px;
+			 width: 100px;
+			 text-indent: -9999px;
+		}
+		.github {
+ 			background-position: -100px 0;
+		}
+
+		*Here we have the 2 different logos in a single image. the twitter logo is displayyed at the basic background-position of 0,0 the .github image is simply the same background image but the display is shifted 100px to the Right on the X-axis.
+
+
+	Multiple images & states: Here we can have 4 images loaded simultaneously for display.
+
+		*CSS*
+		.twitter:hover, .twitter:focus {
+		 background-position: 0 -100px;
+		}
+		.github:hover, .github:focus {
+		 background-position: -100px -100px;
+		}
+
+		We can include shifting downward as well allowing for a total of 4 displays to be shown through a single image.
+
+base64 encoding: 
+	Directly embed images into your CSS
+	IE8+
+
+		*CSS*
+		background-image: url(data:image/png;base64,iVBO...;

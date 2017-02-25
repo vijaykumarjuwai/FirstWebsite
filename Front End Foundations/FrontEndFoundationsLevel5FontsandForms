@@ -1,0 +1,63 @@
+Fonts and font styles can be controlled with CSS.
+
+The font-family property is used to set the ideal font and a few fallback options.
+
+
+*CSS*
+body {
+font-family: Helvetica, Arial, sans-serif;
+   }
+
+In this, the 1st font (Helvetica) is the ideal font & the other fonts are backups which will be loaded if the 1st font fails to load.
+
+*CSS*
+body {
+font-family: Helvetica, Arial, "Times New Roman", sans-serif;
+   }
+
+    Note that multi-word fonts must be put in quotes.
+
+Browsers have default font settings so its important to clear all defaults at the beginning of CSS.
+
+*CSS*
+html, body, h1, h2, h3, p, ol, ul, li, a{
+	padding: 0;
+	border: 0;
+	margin: 0;
+	font-size: 100%;
+	font-inherit;
+}    
+
+This will clear as presets regarding fonts
+
+Font size is set with the font-size property.
+
+	h2 {
+		font-size: 26px
+
+	}
+
+	Font sizes can be set with pixels, percentages and ems.
+
+Font thickness is set with the font-weight property.
+
+	h2 {
+		font-size: 26px
+
+}
+
+	Font Weight Values: normal, bold, lighter, bolder, or #values 100, 200 . . . 900
+
+Font-style property sets italics.
+
+Text-transform turns the text upper and lower case.
+
+Line-height is like a margin for each line in a box. It adjusts the spaces between lines in a given box of text.
+
+.main-content p{
+	line-height: 26px;
+}
+
+
+
+

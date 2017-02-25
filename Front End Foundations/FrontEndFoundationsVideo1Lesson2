@@ -1,0 +1,47 @@
+http://example.com/magic-cake.html
+
+http:// is the protocol
+example.com is the server
+magic-cake.html is the path to a file
+
+<a> . . . </a> is the anchor tag and is used to create links
+
+	The href attribute within an anchor tag (<a>) sets what page should open when the link is clicked.
+
+	<a href="http://example.legal.html">legal page<a/>
+		This means that "legal page" with display as a clickable link and will take the user to the page http://example.legal.htm
+
+	The target attribute attribute sets where the page you set in the href should open when the link is clicked. I.E. will it replace the current window or will it open in a new tab or window. If the target attribute is not added the default openning is self.
+
+		target="_blank" means clicking will open in a new tab
+		target="_self" means clicking will replace the current tab
+
+		<a href="http://example.legal.html" target="_blank">legal page<a/>
+			Here the link will open in a new tab
+
+Absolute vs. Relative Paths
+	Absolute paths ask for a file from a specific server and always include the protocol [http://] & the server [example.com]
+		<a href="http://example.legal.html">legal page<a/>
+
+
+	Relative paths ask for a file with no server specified and never include the protocol [http://] & the server [example.com]
+			<a href="legal.html">legal page<a/>
+
+		If no server name is included, the browser assumes you mean the same server that your page is on.
+		
+		Relative links should almost always be used when linking to pages that are located on the same site.
+		
+		<ul>
+			<li><a href="home.html">Home</a></li>
+		</ul>	
+
+	Absolute Links always need to be used when linking to pages that are located on another site/server
+
+		<ul>
+			<li>1 pound of
+				<a href="http://www.amazon.com/Domino-. . . ">sugar</a>
+			</li>
+		</ul>		
+
+
+

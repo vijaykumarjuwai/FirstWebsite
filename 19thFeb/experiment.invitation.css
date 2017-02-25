@@ -1,0 +1,53 @@
+* { 
+	padding: 0; 
+  	border: 0; 
+  	margin: 0;
+}
+body{
+border: solid;
+width: 800px;
+margin: 50px auto 0 auto;
+font-family: helvetica, sans-serif;
+}
+
+.letter{
+	background-color: beige;
+}
+
+header {
+	color: white;
+	text-align: center;
+	background-color: green;
+}
+
+content p{
+	text-align: center;
+	background-color: pink;
+}
+
+.contactform{
+	text-align: center;
+	padding-bottom: 20px;
+	background-color: beige;
+}
+
+
+label, input {
+	margin: 0 auto;
+	display: block;
+}
+
+label{
+	float:left;
+}
+
+input{
+	border: solid 1px;
+	border-radius: 15px;
+}
+
+input[type=submit] {
+	margin-top: 10px;
+	width: 130px;
+
+}

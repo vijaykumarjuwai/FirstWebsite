@@ -1,0 +1,91 @@
+Image Issues
+
+	Image Use:
+
+		Content should be marked up as inline images:
+
+		<h4>Rental Products</h4>
+			<ul>
+				<li><img src="snowmobile.jpg" alt="Snowmobile" /></li>
+			</ul>
+
+
+		Layout elements should be defned as background images:
+
+			*HTML*
+			<h1>Feel the rhythm, feel the rhyme, get on up, it’s
+			bobsled time!</h1>
+
+
+			*CSS*
+			h1 {
+				background: url(divider.jpg);
+				margin-bottom: 10px;
+				padding-bottom: 10px;
+			}
+
+	Image Cropping:		
+
+	*HTML*
+	<h4>Rental Products</h4>
+	<ul class="rental">
+		 <li class="crop">
+		 	<img src="snowboard.jpg" alt="Snowboard" />
+		 </li>
+
+	*CSS* THIS IS THE OVERFLOW CROP METHOD THE IMAGE STAYS THE SAME THE WINDOW IS RESTRAINED	 
+		.crop {
+			 height: 300px;
+			 width: 400px;
+			 overflow: hidden;
+		}
+
+	OR
+	
+	*HTML*
+	<h4>Rental Products</h4>
+	<ul class="rental">
+		 <li class="crop">
+		 	<img src="snowboard.jpg" alt="Snowboard" />
+		 </li>	
+
+	*CSS* THIS has the overflow on the window and then allows the hight of the image itself to adjust with	 
+		.crop {
+			height: 300px;
+			width: 400px;
+			overflow: hidden;
+		}
+
+		.crop img {
+ 			height: auto;
+ 			width: 400px;
+		}
+
+	OR	
+
+
+	*HTML*
+	<h4>Rental Products</h4>
+	<ul class="rental">
+		 <li class="crop">
+		 	<img src="snowboard.jpg" alt="Snowboard" />
+		 </li>	
+
+	*CSS* This is the same but it allows us to adjust for portrait oriented images. 
+		.crop {
+			height: 300px;
+			width: 400px;
+			overflow: hidden;
+		}
+
+		.crop img {
+ 			height: 300px;
+ 			width: auto;
+		}	 
+
+	Alternatives:
+		Resize images to a square < height and width of all of your images
+		Resize them server-side
+		Provide image-uploading instructions in your CMS	
+
+		

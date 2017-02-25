@@ -1,0 +1,44 @@
+HTML5 doctype:
+	<!DOCTYPE html>
+
+HTML5 meta declaration:
+	<meta charset="UTF-8">
+
+Script Tag:
+	<script src="file.js"></script>
+
+Link Tag:	
+ 	<link rel="stylesheet" href="file.css">	
+
+The i tag represents text in an “alternate voice” or “mood”
+
+	Some example uses for the i tag:
+		Taxonomic designation
+		Technical term
+		Idiomatic phrase from another language Transliteration
+		A thought
+		Ship name in Western texts
+
+	Example usage of the i tag:
+		<p><i>I hope this works</i>, he thought.</p>
+
+The b tag represents “stylistically offset” text
+
+	Some example uses for the b tag:
+		Key words in a document abstract
+		Product names in a review
+		Actionable words in interactive text-driven software 
+		Article lead
+
+	Example usage of the B tag:
+		<p><b class="lead">The event takes place this upcoming Saturday, and over 3,000 people have already registered.</b></p>	
+
+The em tag now means “stress emphasis”
+	Example usage of the em tag:
+		<p>Make sure to sign up <em>before</em> the day of the event, September
+		16, 2013.</p>
+
+The strong tag now means “strong importance”	
+	Example usage of the strong tag:	
+		<p>Make sure to sign up before the day of the event,
+		<strong>September 16, 2013</strong>.</p>	

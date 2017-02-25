@@ -1,0 +1,213 @@
+Staying DRY
+	Dont
+	Repeat
+	Yourself
+
+	Suppose you want to include a font property in a number of text-related elements:
+
+		*HTML*
+		<body>
+			<div class="container">
+				<h1>Sven's Snowshoe Superstore</h1>
+				<p>Our snowshoes are so stylish!</p>
+				<a class="sale" href="/sale">View our sales</a>
+			</div>
+		</body>
+
+		*CSS*
+		h1 {
+		font-family: Arial, sans-serif;
+		}
+		p {
+		font-family: Arial, sans-serif;
+		}
+		.sale {
+		font-family: Arial, sans-serif;
+		}
+
+		*CSS*
+		body {
+		font-family: Arial, sans-serif; 	
+		}
+
+		The 1st piece of CSS is ineffeciant, simply modifying the body will do the same thing.
+
+	You can also target another parent element:
+
+		*CSS*
+		.container {
+ 			font-family: Arial, sans-serif;
+		}
+
+		*HTML*
+		<body>
+			<div class="container">
+				<h1>Sven's Snowshoe Superstore</h1>
+				<p>Our snowshoes are so stylish!</p>
+				<a class="sale" href="/sale">View our sales</a>
+			</div>
+		</body>
+
+	Use selector combination:
+	
+		*CSS*
+
+		p {
+			font-size: 12px;
+		}
+		.ski_lift {
+			font-size: 12px;
+		}
+		h6 {
+			font-size: 12px;
+		}
+
+
+	Can be combined into:
+		*CSS*
+
+		p, .ski_lift, h6 {
+			font-size: 12px;		
+		}
+
+	Selector abstraction:
+	
+		*HTML*
+
+		<input type="submit" class="submit" />
+		<a href="next_page.html" class="next_button" >Next</a>
+
+		*CSS*
+
+		.submit { border: 1px solid #000; cursor: pointer;
+			text-transform: uppercase;
+		}
+
+		.next_button { border: 1px solid #000; cursor: pointer;
+			text-transform: uppercase;
+		}
+
+	Can be combined into: DRY this up by abstracting your the CSS declarations
+	into one class:
+
+		*HTML*
+
+		<input type="submit" class="button" />
+		<a href="next_page.html" class="button" >Next</a>
+
+		*CSS*
+
+		.button {border: 1px solid #000; cursor: pointer;
+		text-transform: uppercase;
+		}
+
+	What if the buttons are only mostly the same?
+	
+	*CSS*
+	.button {
+		background: #fff;
+		border: 1px solid #000;
+		color: #333;
+		cursor: pointer;
+		}cursor: pointer;
+	}
+
+	.submit {
+		background: #555;
+	}
+
+	*HTML*
+	<input type="submit” class="button submit" />
+	<a href="next_page.html" class="button">Next</a>	
+
+		Here the order is important
+
+	Style Shorthand Margins: 
+	
+		*CSS*
+		.ski_poles { margin-top: 15px; margin-left: 20px;
+		margin-right: 10px; margin-bottom: 0; }	
+
+		Can be rewritten as:
+
+		*CSS*
+		.ski_poles {
+ 			margin: 15px 10px 0 20px; /* top right bottom left */
+		}
+
+	Selected CSS property shorthands:
+	
+	font: 16px/18px bold italic sans-serif;
+	/* size/line-height weight style family */
+
+	background: #000 url(image.jpg) no-repeat center top;
+	/* color image repeat x-pos y-pos */
+
+	list-style: disc inside none;
+	/* style position image */
+
+	margin or padding: 0 10px 0 10px / 0 10px 0 / 0 10px;
+	/* top right bottom left / top right&left bottom / top&bottom right&left */
+
+	border: 3px solid #ccc;
+	/* width style color */	
+
+Display Types:
+
+	display: none / block / inline / inline-block
+
+	*HTML*
+
+	<div class="container">
+		<h1>Sven's Snowshoe Superstore</h1>
+		<p>Our snowshoes are so stylish!</p>
+		<a class="sale" href="/sale">View our sales</a>
+	</div>	
+
+	*CSS*
+
+	.sale {
+		float: left;
+		width: 100%;
+		padding: 0 10px;
+		margin: 5px 0;
+		text-align: center;
+	}
+
+	Inline elements:
+		Typically found within block-level elements
+
+		Only take up the space of the content inside
+
+	Inline-block
+		Same fow as an inline element but behave as a block element	
+		Do not generate a line break before and after the content
+
+	*HTML*
+	
+	<div class="container group">
+		<h1>Sven's Snowshoe Superstore</h1>
+		<p>Our snowshoes are so stylish!</p>
+		<a class="sale" href="/sale">View our sales</a>
+	</div>
+
+	*CSS*
+	.sale{
+		display: block;
+		padding: 0 10px;
+		margin: 5px 0;
+		text-align: center;
+	}
+
+Centering: 
+
+	Centering a block-level element:
+
+		Define a width, and the element width must be less than that of
+		the parent container
+
+		margin: 0 auto;	
+
+	Centering inline and inline-block elements:
+
+		text-align: center

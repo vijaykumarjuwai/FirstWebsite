@@ -1,0 +1,148 @@
+Section: The section element represents a generic document or application
+section.
+
+	Section VS. Div: A div has no semantic meaning, but the section element does. It’s used for grouping together thematically related content.
+
+	You might want to replace some of your div elements with section elements, but remember to always ask yourself, “Is all of the content related?”
+
+		Use div when you simply want to group content together out of convenience. Use content when all the content has some relationship that is relevant to the reader of the website.
+
+	Example usage of the section tag:
+
+		<section>
+		  <h2>The Gallery</h2>
+		  <!-- ... -->
+		</section>	
+
+Document outline: The document outline produces an outline summary of an HTML document based on how it is marked up.
+
+	The following elements have their own self-contained outline:
+		Article 
+		Aside 
+		Nav 
+		Section	
+
+	*HTML*	
+	<h1>This is the title of the page.</h1>
+	<section>
+	  <h2>This is the title of a sub-section.</h2>
+	</section>
+
+	*DISPLAY*
+	1. This is the title of the page.
+		1.1 This is the title of a sub-section.	
+
+Header: A group of introductory or navigational aids.
+
+	There can be many different headers on a page.
+	Usually appears at the top of a document or section, but
+	is defined by its content rather than its position.
+
+	<section>
+  		<header>
+			<h1>The heading of the section</h1> Upcoming Section Title
+			 <p>This is content in the header.</p>
+		</header>
+		<p>This is some information within the section.</p>
+	</section>		
+
+Footer: The footer element represents a footer for its nearest ancestor sectioning content or sectioning root element. Like the header, the footer element is not position-dependent. It should describe the content it is contained within.
+
+	Example of the footer tag:
+		<footer>
+			<!-- ... -->
+		</footer>
+
+	Example usage of the footer tag within a section tag:	
+
+	<section>
+		 <header>
+			<h1>The heading of the section</h1> Upcoming Section Title
+		 	<p>This is content in the header.</p>
+		</header>
+		<p>This is some information within the section.</p>
+		<footer>
+		  <p>By "Author Name"</p>
+		</footer>
+	</section>	
+
+Aside: The aside now covers various contexts:
+		When used within an article element, the aside contents should be related to that particular article it is contained within.
+		When used outside an article element, the aside contents should be specifically related to the site.	
+
+	An aside element is appropriate when it is used to represent content that is not the primary focus of an article or page, but it is still related to the article or page.
+	
+		<aside>
+			<!-- ... -->
+		</aside>	
+
+		Example usage of the aside tag within a section:
+
+		<section>
+  			<header>
+				<h1>The heading of the section</h1> Upcoming Section Title
+  				<p>This is content in the header.</p>
+			</header>
+			<p>This is some information within the section.</p>
+			<aside>
+ 				<p>Some secondary information.</p>
+			</aside>
+			<footer>
+				<p>By "Author Name"</p>
+			</footer>
+		</section>
+
+Nav: The nav element represents a section of a page that links to other pages or to parts within the page: a section with navigation links. The nav element is intended for “major navigation.”
+
+	<nav> 
+		<ul>
+			<!-- ... -->
+		</ul> 
+	</nav>
+
+Article: The article element represents a complete, or self-contained, composition in a document, page, application, or site and that is, in principle, independently distributable or reusable, e.g. in syndication. The article element is another type of section. It is used for self-contained related content.
+
+	Some uses for the article tag:
+		A blog post
+		A news story
+		A comment on a post A review	
+
+	<article>
+		<!-- ... -->
+	</article>	
+
+Main: The main element represents the main content of the body of a document or application. The main content area consists of content that is directly related to or expands upon the central topic of a document or central functionality of an application.
+
+	Do not include more than one main element in a document 
+	Do not include the main element inside of an article, aside, footer, header, or nav element		
+
+	<main>
+		<!-- ... -->
+	</main>	
+
+Figure/figcaption: The figure element represents a unit of content, optionally with a caption, that is self-contained, that is typically referenced as a single unit from the main flow of the document, and that can be moved away from the main flow of the document without affecting the document’s meaning.
+
+
+	A common use of the figure tag is for an image within an article:
+		<figure>
+		  <img src="image.jpg" alt="My Picture" />
+		</figure>
+
+Figcaption: The figcaption element represents a caption or legegend for a figure.
+
+	<figure>
+  		<img src="image.jpg" alt="My Picture" />
+  		<figcaption>This is a caption for the picture.</figcaption>
+  	</figure>	
+
+Time: The time element represents either a time on a 24 hour clock, or a precise date in the proleptic Gregorian calendar, optionally with a time and a time-zone offset.
+
+	<time>2013-09-16</time>
+
+	We want the format “mm/dd/yyyy”:
+		<time>09/16/2013</time>		
+
+	We use the datetime attribute to get our desired format:
+		<time datetime="2013-09-16">09/16/2013</time>
+
+	Without the datetime attribute, content must be a valid date, time, or precise datetime.		

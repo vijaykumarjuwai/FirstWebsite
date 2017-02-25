@@ -1,0 +1,73 @@
+Most images on webpages fall into one of these three categories
+	Content Images 
+		Content images are any images that are just as necessary to the page as all of the text.
+	Layout Images
+		These are in the background, and are not necessary to understand the content of the page.
+	User Interface Images
+		These assist with the interface of the webpage, but are not required to understand the content of the page.
+
+	Content images are created in HTML with the <img> tag.
+		<img> is an empty tag, meaing it just has an openning tag <img>, no closing tag </img>
+
+		<img src="cake.png">
+			Here img tag includes the src attribute with the relative path "cake.png"
+
+		src attritue is set to the image we want to display	
+
+	It makes sense to organize your images so they aren’t in the main site
+	folder.	The folder can be called images and all images are stored there.
+
+		<img src="images/cake.png">
+
+	Alt attributes can be attached to an image.	This alt attribute contains text which describes the image for those who cannot see it.
+
+		<img src="images/cake.png" alt="Magic Cake Photo">
+
+	<img> is an inline-level tag, but they are often put inside block-level tags. This is similar to <a> tags, which almost always appear as children of block-level tags.	
+
+*HTML*
+	<h3>Your Photos</h3>
+	<ul class="Photos>"
+		<li><img src="images/cake1.png" alt="Cake Photo 1"></li>
+		<li><img src="images/cake2.png" alt="Cake Photo 2"></li>
+		<li><img src="images/cake3.png" alt="Cake Photo 3"></li>
+	</ul>
+	
+*CSS*
+	.photos {
+		list-style-type: none;
+	padding: 0;
+	}
+
+	.photos li{
+		display: inline;
+		padding-left: 11px;
+	}
+
+*Using an image as a site/logo mark*	
+We can replace the <h1> with an <img> tag.
+
+<div class="header">
+	<h1>Recipe World</h1>
+
+*In the above  an <h1> tag which will display text* 
+
+<div class="header">
+	<img src="images/logo.png" alt="Recipe World Logo">
+
+*In the above instead of having an <h1> tag we instead have an image.*
+
+<img> is an inline-level tag so it can’t be centered with text-align. 
+
+	Instead, set just that image to display: block and 
+	center it with the margin: auto approach.
+
+*HTML*
+<div class="header">
+	<img src="images/logo.png" alt="Recipe World Logo">
+
+*CSS*
+.header img {
+	dispaly: block;
+	margin: 0 auto 0 auto;
+}

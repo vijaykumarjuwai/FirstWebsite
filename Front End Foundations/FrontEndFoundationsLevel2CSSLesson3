@@ -1,0 +1,126 @@
+Every tag shown in the body is contained in an invisible rectangle that we’ll call the box.
+
+HTML
+ <p>Magic Cake is one of...</p>
+ <p>We also need to stress...</p>
+
+ tags are either block-level or inline-level. 
+
+ 	Inline level tags modify information within a box rather than creating a new box.
+
+ 	Block level tags always take the entire width of their container and therefore every new box gets pushed down to the line below.
+
+ Some block-level tags
+ 	h1, h2, h3, p, ul, li
+
+ Some inline-level tags
+ 	a, img, input, label
+
+ block-level tags can be made inline using the CSS display property & vice versa
+ 
+	 ul li {
+	 display: inline;
+	 }	
+
+	 This will convert block level items into inline-level list items
+
+	The box model is a way to describe the borders and spacing in between the boxes of each tag.
+
+		There are 4 parts of the box model:
+
+		1. Content area
+			The content area contains your actual content (text, images, etc.) 	
+
+		2. Padding
+			Padding is added to the top, right, bottom, or left of the content area.
+
+		3. Border
+			Borders are added around the top, right, bottom, or left of the padding.
+
+		4. Margin
+			Margins are added to the top, right, bottom, or left of the border.	
+
+
+	The full size of a box after these four properties have been set can be calculated like this:
+
+			+ content area width
+			+ padding-left + padding-right
+			+ border-left + border-right 
+			+ margin-left + margin-right
+
+ 		= the full box width
+
+ 	Applying padding to one side at a time using CSS display property
+
+	 	h2 {
+	 		padding-top: 6px;
+	 		padding-right: 3px;
+	 		padding-bottom: 0;
+	 		padding-left: 0;
+
+	 	}
+
+ 	Or it can be formatted all at once in a clockwise order.
+
+	 	h2 {
+	 		padding: 6px *top* 3px *right* 0 *bottom* 0 *left*;
+
+	 	}
+
+ 	You can apply borders all at once and not specify a side.
+
+	 	h2 {
+	 		border-width: 6px;
+	 		border-style: solid;
+	 		border-color: black;
+	 	}
+
+ 	Creating borders has a shortcut version, too.
+ 	
+	 	h2 {
+	 		border: 6px *width* solid *style* black *color*;
+
+	 	}
+
+ 	You can also just pick one side and just add a border there.
+
+	 	h2 {
+	 		border-bottom: 6px *width* solid *style* black *color*;
+
+	 	}
+
+ 	Add margins the same way you add padding, using the same syntax
+
+	 	h2 {
+		 		margin-top: 6px;
+		 		margin-right: 3px;
+		 		margin-bottom: 0;
+		 		margin-left: 0;
+
+		 	}
+
+	or use the same shortcut syntax as padding.
+
+		h2 {
+	 		margin: 6px *top* 3px *right* 0 *bottom* 0 *left*;
+
+	 	}
+
+	 Padding is used to control the size of a box without adjusting the size of the content inside the box.
+	 
+	 Margin is used to control the space between boxes.
+
+	 Browsers actually have a default stylesheet for when no custom styles are set.
+
+	 Add this to the very top of your CSS file to reset default styles.
+
+		 html, body, h1, h2, h3, p, ol, ul, li, a {
+		 	padding: 0;
+		 	border: 0;
+		 	margin: o;
+		 }	
+
+
+
+
+	

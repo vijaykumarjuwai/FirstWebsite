@@ -1,0 +1,70 @@
+html is written in text files. It uses the extension .html. Using .html lets the browser know this is an HTML file.
+
+
+<h1> . . . </h1> is used for headings content.
+	<h1>Recipe World</h1>
+
+	<h1>: Opening Tag
+	</h1>: Closing tag
+
+	The higher heading #s mean the contnent that appears between the headings is less important than lower numbers.
+
+	The page title/company name goes in the <h1>
+	The page main subject goes in the <h2>
+	<h3> through <h6> are used to organize other divisions of page content
+
+<p> . . . </p> is called the paragraph tag & is used for non-heading text.
+
+	Paragraph tag placed beneath a heading tag will appear as text content beneath a given heading.
+		<h1> Recipe World</h1>
+		<h2>Magic Cake</h2>
+		<p> Magic Cake is one of the tastiest  . . . </p>
+
+
+<ul> . . . </ul> is used for unordered lists: This means the list of items does NOT need to be in a specific order:IE it will not display numbers in front of each item
+	Each item in a list needs to be put inside the <li> . . . </li> tag
+
+		<h3>Ingredients</h3>
+		<ul>
+			<li>2 eggs</li>
+			<li>1 pound of sugar</li>
+		</ul>
+
+<ol> . . . </ol> is used for ordered lists, These will start with numbers instead of bullets. 
+		Note you just change what the list is wrapped in, not the content within the list.
+
+	<h3>Ingredients</h3>
+		<ol>
+			<li>2 eggs</li>
+			<li>1 pound of sugar</li>
+		</ol>
+
+<body> . . . </body> everything contained within the body tag will be visible on a webpage.
+	<body>
+		<h3>Ingredients</h3>
+		<ul>
+			<li>2 eggs</li>
+			<li>1 pound of sugar</li>
+		</ul>
+	</body>
+
+<head> . . .  </head> non-visible content is stored within the <head> tag
+	This will be discussed more in detail later in the course. This is content that needs to be run before the page displays.
+
+<html> . . . </html>: All of the HTML code needs to go inside this tag. There is always only 1 html tag per page.
+	<html>
+		<head>
+		</head>
+		<body>
+			<h3>Ingredients</h3>
+			<ul>
+				<li>2 eggs</li>
+				<li>1 pound of sugar</li>
+			</ul>
+		</body>
+	</html>
+
+<! DOCTYPE html> The DOCTYPE ta sets the html version which helps the browser know which version you are running.
+
+
+

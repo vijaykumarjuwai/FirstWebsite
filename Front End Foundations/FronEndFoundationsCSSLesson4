@@ -1,0 +1,116 @@
+Problem: The <ul> padding is being applied to the navigation and ingredients.
+We need a way to add padding to one <ul> but not the other.
+
+	How to apply padding only 1 of a given tag.
+
+Solution: Add a class attribute to an HTML tag so that you can access it directly in CSS
+
+	<ul class="nav"> . . . .
+	</ul>
+
+Then access this class in CSS by putting a period in front of the class name.
+	.nav {
+		padding-left: 0;
+	}	
+
+*Basically naming a given piece of HTML and then selecting that piece of HTML by the name we have given it.*
+
+Classes can be used interchangeably with tags, so the way descendant selectors work doesn’t change.
+
+<ul class="nav">
+	<li><a href="home.html">Home</a></li>
+	<li><a href="recipes.html">Recipes</a></li>	
+	<li><a href="suggest.html">Suggest</a></li>	
+</ul>
+
+.nav a {
+	color: #0000af;
+	text-decoration: none;
+}	
+
+  This selector says find all a tags that are children of any tag with a class of “nav”, and set the color to blue and turn off the underline.
+
+
+	. nav {
+		padding-left: 0;
+	} 
+
+	ul {
+		padding: o o o 50px;
+	}
+
+		Here ul padding overrides the .nav padding because it comes after the .nav in the stylesheet.
+
+		Generally speaking, first declare the broadest rules with type selectors, and then get more specific with class selectors.
+
+		This way, the broader rules cascade down and become defaults, and more specific rules can change the defaults.
+
+	By putting all CCS in a single file we can apply these rules to multiple HTML pages without having to write the CSS directly into each HTML page.
+
+	While CSS can be written inside of a <style> tag in an HTML file, most of the time it’s written in a separate file and connected to the HTML file with a link tag.
+
+	The link tag is an empty tag, meaning it is written with only an opening tag and has no closing tag.
+
+	<link> needs to be the child of the <head> tag
+
+		<html>
+			<head>
+				<link>
+			</head>
+			<body>
+			.
+			.
+			.
+			</body>
+		</html>
+	
+	Since the link tag is empty, the way you use it is by setting different attributes.
+
+		<html>
+			<head>
+				<link type="text/css">
+			</head>
+			<body>
+			.
+			.
+			.
+			</body>
+		</html>
+
+	The type attribute set to text/css lets the browser know we’re going to be loading a CSS file.
+
+		<html>
+			<head>
+				<link type="text/css" rel="stylesheet">
+			</head>
+			<body>
+			.
+			.
+			.
+			</body>
+		</html>
+
+		The rel attribute is short for relationship.
+		Setting rel to stylesheet tells the HTML that it should use the linked file to determine page styles.
+
+		<html>
+			<head>
+				<link type="text/css" rel="stylesheet" href="main.css">
+			</head>
+			<body>
+			.
+			.
+			.
+			</body>
+		</html>
+
+		The href attribute works just like it does with the <a> tag.
+			The href attribute within an anchor tag (<a>) sets what page should open when the link is clicked.
+
+		So in the above code what is happening is 
+			1: we are defining the link as a connection to a CSS file, 
+			2: we are then saying the relationship between this HTML file and the CSS file that it is modifying the style.
+			3: Finally the href says the the link attribute is specifically referencing the CSS file "main.css"
+	
+
+ 	

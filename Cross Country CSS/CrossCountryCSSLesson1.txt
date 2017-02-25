@@ -1,0 +1,117 @@
+Slope Style
+	Adding CSS: Inline style attribute: 
+					<h1 style="color: #98c7d4;">CSS Cross Country</h1> 
+				
+				In the <head>:
+					<head>
+						<style>
+							h1 { color: #98c7d4; } 
+						</style>
+					</head>		
+
+
+				External <link>
+					<head>
+						<title>CSS Cross Country</title>
+						<link rel="stylesheet" href="styles.css" />
+					</head>
+					
+Selectors:
+	Primary DOM selectors:
+		Element Selector:
+			*HTML*
+			<h1 class="intro" id="header">Nice and Toasty</h1> 
+			
+			*CSS*
+			h1 {
+     			color: #aba4ac;
+				margin-bottom: 10px; 
+			} 
+		
+		Class Selector: 
+			*HTML*
+			<h1 class="intro" id="header">Nice and Toasty</h1>
+
+			*CSS*
+			.intro {
+			 	color: #aba4ac;
+			 	margin-bottom: 10px;
+			}
+
+		ID Selector:						
+			*HTML*
+			<h1 class="intro" id="header">Nice and Toasty</h1>
+
+			*CSS*
+			#header {
+ 				color: #aba4ac;
+ 				margin-bottom: 10px;
+			}
+
+		Compound Selectors:	
+			*HTML*
+			<h1 class="intro" id="header">Nice and Toasty</h1>
+
+			*CSS*
+			h1#header {
+ 				color: #aba4ac;
+ 				margin-bottom: 10px;
+			}
+
+Cascade Order:
+
+	Style priority is determined by position in site: The lower the item in this list the more important it is. I.E. its styling will override all styles found above.
+		External <link>
+		In the <head>
+		Inline style attribute
+		Using !important
+
+	Priority is also dependent on position in document:	
+
+		.intro {
+			 color: #444245;
+			}
+		.intro {
+			 color: #dddadd;
+			}
+			
+			the second color defnition for .downhill overrides the first
+
+	Non-conflicting properties will be combined:
+	
+	.intro {
+ 		color: #dddadd;
+		}
+	.intro {
+	 	margin-bottom: 5px;
+	 	width: 900px;
+	}		
+
+	Will become
+
+	.intro {
+ 		color: #dddadd;
+	 	margin-bottom: 5px;
+	 	width: 900px;
+	}	
+
+Floating Left & Right: Removes elements from the document flow and moves them to a specified edge. Other content within the parent element will wrap around floats 
+		
+	Stacking order: Floated elements stack up to the parent edge, then move down to
+	the next available edge. Take care with elements that have difering heights - the frst
+	available edge isn't always below
+
+
+
+	float: left / right / none
+
+	*HTML*
+	<article>
+ 		<img src="ski.jpg" alt="Ski!" />
+ 		<p>To successfully ski, simply do not fall.</p>
+	</article>	
+
+	*CSS*
+	img {
+ 		float: left;
+	}

@@ -1,0 +1,127 @@
+Forms are a way for a web page to get input from a user.
+
+Forms usually contain things like labels, inputs of several different types, text areas, and a submit button.
+*HTML*
+	<form> 
+	  <label>Recipe Name</label> 
+	  <input type="text"> 
+	  <input type="submit" value="Click to Submit"> 
+	</form>
+
+This HTML will produce the form shown below (but some extra attributes would needed to send the form data to the server). suggest.html
+
+The type attribute sets the kind of input field that will display.
+
+	<input type="text">
+	<input type="checkbox">
+	<input type="radio">
+	<input type="file">
+	<input type="password">
+	<input type="submit">
+
+The value of the for attribute in the label should be the same as the value of the id attribute in an input field to associate the label and input.
+
+Each for/id pair has to be unique on the page.	
+
+*HTML*
+	<form> 
+	  <label for="recipe-name">Recipe Name</label> 
+	  <input type="text" id="recipe-name"> 
+	  <input type="submit" value="Click to Submit"> 
+	</form>
+
+input tags should be used for short or single-line user input.
+
+The textarea tag is used for multi-line user input.
+
+*HTML*
+	<form> 
+	  <label for="ingredients">Ingredients</label> 
+	  <textarea id="ingredients"></textarea>
+	  <input type="submit" value="Click to Submit"> 
+	</form>
+
+labels and inputs are inline-level tags, but it usually makes sense to display one on top of the other like block-level instead of side-by-side.
+
+*CSS*
+
+	label, input {
+		display: block;
+	}
+
+Once you’ve got both tags displaying as block-level, you can style them just like you would any other block-level tag.
+
+	*CSS*
+
+		label, input { 
+	  		display: block; 
+		}. 
+
+		label { 
+	  		margin-bottom: 10px; 
+		}
+		input { 
+	  		width: 500px; 
+	  		margin-bottom: 25px; 
+		}	
+
+Since the submit button is technically an input tag, our input selector properties are affecting the way it is displayed.
+
+Attribute selectors are a way to style a tag based on one of its attributes.
+
+*CSS*
+	input { 
+	    width: 500px; 
+	    margin-bottom: 25px; 
+	}. 
+*CSS*	
+	input[type=submit] { 
+	    width: 120px; 
+	    font-size: 30px; 
+	}
+
+The container around an input is actually just a border, so you can style it with the border property.
+*CSS*
+	input[type=text] {
+	    border: 2px solid #7facaa;
+	}
+
+To adjust the height of the input, style the text inside.
+*CSS*
+	input[type=text] {
+		border: 2px solid #7facaa;
+		font-size: 24px;
+	}
+
+And, since the green line is a border, use padding to put some space between the border and the text.
+*CSS*
+	input[type=text] {
+		border: 2px solid #7facaa;
+		font-size: 24px;
+		padding: 7px;
+	}
+
+You can set a width and height for textareas, but otherwise the styles behave similar to regular inputs.
+*CSS*
+	textarea { 
+	    width: 500px; 
+	    height: 400px; 
+	    padding: 7px; 
+	    border: 2px solid #7facaa; 
+	    margin-bottom: 25px; 
+	    font-size: 24px; 
+	}
+
+It looks awkward if the newsletter label and input are on separate lines since the checkbox is so small, so we can use attribute selectors again to make just this input and label display inline.
+
+*HTML*			
+	<form>
+		<label for="newsletter">Get Newsletter?</label> 
+	  	<input type="checkbox" id="newsletter"> 
+	 	...
+	</form>
+
+*CSS*
+	input[type=checkbox], label[for=newsletter] { 
+  		display: inline; 
+	}

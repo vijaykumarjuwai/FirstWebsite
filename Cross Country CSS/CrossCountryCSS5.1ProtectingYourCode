@@ -1,0 +1,37 @@
+Protecting Your Layout
+
+	If you are worried about a section of a website being removed-such as the feature it is important to put in margin CSS for each individual element so that if one element is removed there are still margins between existing elements.
+
+	Also if a top margin is pushing up again a bottom margin or vice-versa, the margins will not be added together, but rather simply the larger of the two margins will be applied.
+
+	Collapsing margins will not occur when one or more block element has:
+		Padding or border
+		Relative or absolute positioning
+		A float left or right
+
+Specificity Problems
+
+	.sidebar ul li {
+		font-style: italic;
+		font-size: 14px;
+		color: #fff;
+		margin: 5px 0;
+	
+
+	}		
+
+	.featured li {
+		font-style: italic;
+		font-size: 14px;
+		color: #fff;
+		margin: 5px 0;
+	}
+
+	ul li {
+		font-size: 12px;
+		margin 3px 0;
+	}
+
+	Resets & normalization:
+		Eric Meyer's Reset CSS: go.codeschool.com/reset-css
+		Normalize.css: go.codeschool.com/normalize-css

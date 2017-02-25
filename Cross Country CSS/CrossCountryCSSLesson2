@@ -1,0 +1,128 @@
+Clearing Floats:
+			Clear: left/right/both	
+
+
+	Clearing is necessary if:
+	
+		Floated items can be taller than non-foated content
+		All children are floating
+
+	Common float-clearing methods:
+		Clear with a subsequent element
+		Requires sequence to stay intact - breaks if things move
+		Background / border do not extend
+			*HTML*
+			<div>
+	 			<img src="ski.jpg" alt="Skiing!" />
+	 			<p>To successfully ski, simply do not fall.</p>
+			</div>
+			<div class="intro">
+	 			<p>Whee!</p>
+			</div>
+
+			*CSS*	
+			img {
+	 			float: left;
+			}
+			.intro {
+	 			clear: both;
+			}
+
+		Manual clearing: Requires an empty element. Might not be necessary later
+			*HTML*
+			<div>
+ 				<img src="ski.jpg" alt="Skiing!" />
+ 				<p>To successfully ski, simply do not fall.</p>
+ 				<div class="clear"></div>
+			</div>
+
+			*CSS*
+			.clear {
+				clear: both;
+			}
+
+		The clearfix: When used on a parent, the children will be self-cleared
+		
+			*HTML*
+			<div class="group">
+				 <img src="ski.jpg" alt="Skiing!" />
+				 <p>To successfully ski, simply do not fall.</p>
+			</div>
+
+			*CSS*
+			.group:before,
+			.group:after {
+				 content: "";
+				 display: table;
+			}
+			.group:after {
+			 	clear: both;
+			}
+			.group {
+ 				zoom: 1; /* IE6&7 */
+			}
+
+Inheritance & Specificity: Nested elements automatically inherit parent styles
+
+			*HTML*
+			<article class="featured">
+ 				<p>Dang, it's cold up here!</p>
+			</article>	
+
+			*CSS*
+			.featured {
+ 				color: #aba4ac;
+			}
+
+	Selectors can be nested to override parent properties:
+	
+			*HTML*
+			<article class="featured">
+ 				<p>Dang, it's cold up here!</p>
+			</article>
+
+			*CSS*
+			.featured {
+ 				color: #0000ff;
+			}
+			.featured p {
+ 				color: #fff;
+			}	
+
+			*nesting the element selector overrides the colon on .featured*
+
+		Dealing with specificity:
+	
+			*HTML*
+				<div id="content" class="featured">
+	 				<p>Break out the cocoa.</p>
+				</div>		
+
+			*CSS*
+				#content {
+ 					color: #555;
+				}
+				.featured {
+		 			color: #ccc;
+				}
+
+			*The question is which CSS rule will the HTML follow?* 
+			
+
+			*HTML*
+
+			<section id="content">
+ 				<p class="featured">Free coffee with ski rental.</p>
+ 				<p>Choose from 48 different ski colors.</p>
+			</section>
+
+			*CSS*
+
+			#content p {
+				color: #000;
+			}
+			#content .featured {
+				color: #777; 
+			}
+			
+			This will let us modify the .featured even though we are already using a more specific class selector (#content) above.	

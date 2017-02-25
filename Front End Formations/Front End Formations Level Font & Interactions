@@ -1,0 +1,183 @@
+Font Face: Using @font-face, we have the ability to provide online fonts for use on our websites.
+
+		Example usage of @font-face:
+
+		We specify the font-family, which is what we’ll use to call the font:
+			*CSS*
+			@font-face{
+				font-family: 'OpenSansRegular';
+			}
+
+		We add the location of the font files through the src property:	
+			*CSS*
+			@font-face{
+				font-family: 'OpenSansRegular';
+				src: url('OpenSansRegular-webfont.eot');
+			}
+
+		We specify the font-style:
+			*CSS*
+			@font-face{
+				font-family: 'OpenSansRegular';
+				src: url('OpenSansRegular-webfont.eot');
+				font-style: normal;
+			}	
+
+		We specify the font-weight:
+			*CSS*	
+			@font-face{
+				font-family: 'OpenSansRegular';
+				src: url('OpenSansRegular-webfont.eot');
+				font-style: normal;
+				font-weight: normal;
+			}	
+
+	With @font-face fonts, just like any other font declaration, we’ll want to add fallback fonts.
+
+		Using @font-face in our stylesheet with fallbacks:
+
+			*HTML*
+			h1 {
+	  			font-family: 'OpenSansRegular', Helvetica, Arial, sans-serif;
+			}
+
+			*CSS*	
+			@font-face{
+				font-family: 'OpenSansRegular';
+				src: url('OpenSansRegular-webfont.eot');
+				font-style: normal;
+				font-weight: normal;
+				}
+
+	We can alter the @font- face call in order to use the font-weight and font- style properties as usual.			
+			*CSS*
+			@font-face{
+				font-family: 'OpenSansRegular';
+				src: url('OpenSansBold-webfont.eot');
+				font-style: normal;
+				font-weight: bold;
+				}
+
+Transforms: Using the transform property in CSS3, we can translate, rotate, scale, and skew elements in CSS.
+
+	You can create a 2D translation using transform: Translation simply means to move the element somewhere else on the page
+
+	*CSS*
+	.element {
+  		transform: translate(20px, 30px
+  			}	
+
+  	.element {
+  		transform: translate(modifies the x-axis-the input value can be either a length or a percentage, modifies the y-axis-the input value can be either a length or a percentage
+
+  		If no value is specified the value is 0.
+
+  	You can use translateX and translateY to translate the x and y values individually:	
+	  	.element {
+	  		transform: translateX(20px);
+		}	
+
+		.element {
+	  		transform: translateY(30px);
+
+		With rotate, you can rotate an element clockwise around its origin by the specified angle.
+		
+		Example usage of rotate:
+			.element {
+			  transform: rotate(45deg);
+			} 
+
+		With scale, you can do a 2D scale by a specified unitless number:
+			.element {
+  				transform: scale(1.2);
+			}
+
+			scale(<sx>~A unitless # for the x-axis, <sy>~A unitless # for the y-axis)
+
+		You can use scaleX and scaleY to translate the x and y values individually:
+			.element {
+			  transform: scaleX(1.2);
+			}
+			.element {
+			  transform: scaleY(0.3);
+			}
+			
+	With skew, an element is skewed around the x or y axis by the angle specified.
+	
+	Example usage of skewX:
+		.element {
+		  transform: skewX(-25deg);
+		}
+
+	Example usage of skewX: 
+	
+	skewX(<ax>~ An <angle> for the x-axis.)	
+
+	Example usage of skewY: 
+	
+	skewY(<ay>~ An <angle> for the y-axis.)	
+
+Transitions: CSS3 provides transitions, which allow you to transition between two states of a specified element.
+
+	Example usage of transition:
+		.element {
+		  background-color: black;
+		}
+
+		.element:hover {
+  			background-color: blue;
+		}
+
+		.element {
+  			background-color: black;
+  			transition: background-color 0.2s ease-in-out; 
+  			*The background-color transistions from black to blue over a period of 0.2 seconds.*
+		}				
+  		
+  		.element:hover {
+  			background-color: blue;
+
+  	Example usage of the shorthand transition property: 
+  		transition: <property> <duration> <timing-function> <delay>
+  		transition: <property *The CSS property you want to transition* > <duration *The duration of the transition. The value value is 0s, or 0 seconds.> <timing-function *The timing of the transition itself.> <delay *The amount of time to wait between the change that is being requested on a specific property and the start of the transition.> When we define transitions individually we need to define their characteristics such as transition-property: transition-duraction: etc etc.
+
+  		Timing-functions: 
+  		ease 
+  		ease-in 
+  		ease-in-out 
+  		linear
+		cubic-bezier
+		step-end
+
+		You can set the transition values individually, as well:
+			.element {
+			  transition-property: background-color;
+			  transition-duration: 0.2s;
+			  transition-timing-function: ease-in-out;
+			  transition-delay: 0.1s;
+			}
+		steps()
+
+	Using all as the transition- property, we can transition multiple properties at once
+	
+	Example usage of transition using the all property:
+		.element {
+		  background-color: black;
+		  color: white;
+		  transition: all 0.2s ease-in-out;
+		}	
+
+		.element:hover {
+  			background-color: grey;
+  			color: black;
+		}
+
+Progressive Enhancement: The term “progressive enhancement” refers to the use of newer features that add to the experience in modern browsers that support those features, but doesn’t detract from the experience in older browsers.
+
+	Example of progressive enhancement:
+		 .element {
+		  background: #ccc;
+		  border-radius: 10px;
+		  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.75);
+		}		
+						

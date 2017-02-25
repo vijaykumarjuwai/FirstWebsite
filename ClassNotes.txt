@@ -1,0 +1,10 @@
+CSS Rules
+
+ID (#Gallery) will overide class (.gallery) and class will overide tag (body)
+
+IDs are sometimes used in javascript.
+
+HTML is markup language so it formats how a page looks, but it does not make any programs.
+CSS styles sheets, it defines how something looks.
+Javascript is a pure programming language & it is used for websites.
+	w3school has lots of info on javascript.

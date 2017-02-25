@@ -1,0 +1,110 @@
+Layout images are created in CSS with the background property.
+
+There’s several different properties that relate to background images. 
+background-color works just like the color property.
+
+You should always set a background color in case the background image fails to load.
+
+
+*CSS*
+	body {
+		background-color:#5f5f5f;
+		background-image: url(images/gobbler.png);
+	}
+
+	Check out subtlepatterns.com for this and other patterns!
+
+background-position can be used to position the image in a container.
+*CSS*
+	body {
+		background-color:#5f5f5f;
+		background-image: url(images/gobbler.png);
+		background-position: top left;
+	}
+
+		In the background-position code the first word can be top, center, or bottom the second word can be left, center, or right.
+
+background-repeat can be used to repeat tiled images.
+*CSS*
+	body {
+		background-color:#5f5f5f;
+		background-image: url(images/gobbler.png);
+		background-position: top left;
+		background-repeat: repeat
+	}
+
+		Other background-repeat values
+			repeat-x: tile the image horizontally 
+			repeat-y: tile the image vertically 
+			no-repeat: don’t tile or repeat anything
+
+	All four of those can be shortened into a single background property.
+*CSS*	
+	body {
+		background-color:#5f5f5f;
+		background-image: url(images/gobbler.png);
+		background-position: top left;
+		background-repeat: repeat
+	}
+
+	can be written in a single line as:
+*CSS*
+	body {
+	background: #5f5f5f url(images/gobbler.png) top left repeat;
+	}		
+
+Creating different tiled backgrounds:
+
+	We can set different backgrounds for different containers.
+
+	Here, we’re using one repeated background for the body, another for the main-content, and another for the divs on the recipes page.
+*CSS*
+	body { 
+	  background: #000000 url(images/stardust.png) top left repeat; 
+	}
+*CSS*
+	.main-content { 
+	  background: #ffffff url(images/crossword.png) top left repeat; 
+	}
+*CSS*
+	.recipes li { 
+	  background: #ffffff url(images/li-bg.png) top left repeat; 
+
+
+Writing on top of background images:
+
+	One way to do this is to create an empty div container that completely contains a background image, and put text tags inside of it.
+
+		*HTML*
+			<div class="main-content"> 
+			  	<h2>Home</h2>
+			  	<div class="featured-image">
+				</>
+			</div>
+
+		*CSS*	
+
+		.featured-image { 
+	  		width: 630px; 
+	  		height: 246px; 
+	  		background: #ffffff url(images/featured-cake.png) top left no-repeat;
+	  		} 
+
+  	Then, add a tag that shows text as a child of that container.
+  	
+  	*HTML*	
+  		 <div class="featured-image">
+  			<h3>Featured: Magic Cake</h3>
+		</div>
+
+	*CSS*
+	
+		.featured-image h3 { 
+			  margin: 0; 
+			  background-color: #333333; 
+			  color: #ffffff; 
+			  padding: 5px 0 5px 15px; 
+			  text-transform: uppercase; 
+		}	
+
+ 

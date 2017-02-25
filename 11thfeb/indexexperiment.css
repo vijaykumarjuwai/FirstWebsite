@@ -1,0 +1,190 @@
+*{ 
+	padding: 0; 
+  	border: 0; 
+  	margin: 0;
+  	font-size: 100%;
+  	font: inherit;
+
+}
+
+.index {
+	background-image: url(images/washi.png);
+}
+
+.indexheader {
+	background-color: #b56663;
+	padding: 10px 0 10px 10px;
+}
+
+.indexheader h1 { 
+	margin: 10px 0 15px 0;
+	background-color: #b56663;
+	color: #ffffff;
+	text-align: center;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 26px;
+}	
+
+.indexheader a {
+	display: inline;
+	background-color: #b56663;
+	color: #F0F8FF;
+	text-decoration: none;
+}	
+
+.indexheader a:hover {
+			text-decoration: underline;
+			color: darkturquoise;
+}	
+
+.gallery {
+	background-image: url(images/washi.png);
+}
+
+.galleryheader {
+	background-color: #F0FFFF;
+	padding: 10px 0 10px 10px;
+}
+
+.galleryheader h1 { 
+	margin: 10px 0 15px 0;
+	background-color: #F0FFFF;
+	color: #000000;
+	font-family: Helvetica, Arial, sans-serif;
+	text-align: center;
+	font-size: 26px;
+}	
+
+.galleryheader a {
+	display: inline;
+	background-color: #F0FFFF;
+	color: #000000;
+	text-decoration: none;
+}	
+
+.galleryheader a:hover {
+			text-decoration: underline;
+			color: darkturquoise;
+}	
+
+.indexnav {	
+	background-color: #b56663;
+	text-align: center;
+}
+
+.indexnav li {
+	display: inline;
+	background-color: #b56663;
+	color: #F0F8FF;
+	padding: 0 5px 0 5px;
+}	
+
+.indexnav a {
+	display: inline;
+	background-color: #b56663;
+	color: #ffffff;
+	text-decoration: none;
+}		
+
+.indexnav a:hover {
+			text-decoration: underline;
+			color: darkturquoise;
+}	
+
+.gallerynav {	
+	background-color: #F0FFFF;
+	text-align: center;
+}
+
+.gallerynav li {
+	display: inline;
+	background-color: #F0FFFF;
+	color: #000000;
+	padding: 0 5px 0 5px;
+}	
+
+.gallerynav a {
+	display: inline;
+	background-color: #F0FFFF;
+	color: #000000;
+	text-decoration: none;
+}		
+
+.gallerynav a:hover {
+			text-decoration: underline;
+			color: darkturquoise;
+		}	
+
+.content {
+	margin: 10px auto 0 auto;
+	width: 500px;
+	border: 1px solid #dddddd;
+	padding: 10px;
+	color: #000000;
+	background-image: url(images/asanoha.png);
+	background-repeat: repeat
+}
+
+.content h2 {
+	margin: 10px 0 20px 0;
+	text-align: center;
+	font-family: Helvetica, "Times New Roman";
+	font-size: 23px;
+}
+
+.content h3{ 
+	margin: 15px 0 15px 0;
+	border-bottom: 1px solid #CCCCCC;
+	padding-bottom: 3px;
+	font-family: Helvetica, "Times New Roman";
+	font-size: 20px;
+}	
+
+.content h4{
+	padding-top: 10px;
+	font-family: Helvetica, "Times New Roman";
+	font-size: 16px;
+}
+
+.content p{
+	padding-left: 25px;
+	font-family: Helvetica, "Times New Roman";
+}
+.background li{
+	display: inline;
+}
+
+.background img{
+	float: left;
+	padding-right: 20px;
+}
+
+.contactus {
+	width: 200px;
+	background-image: url(images/cork-wallet.png);
+	background-repeat: repeat;
+	margin: 50px auto 0 auto;
+}
+
+label, input{
+	display: block;
+}
+
+label{
+	text-align: center;
+	margin-bottom: 10px;
+	font-family: Helvetica, "Times New Roman";
+}
+
+input{
+	margin: 0 auto 0 auto;
+}
+
+input[type=submit] {
+	width: 120px;
+	font-size: 12px;
+	font-family: Helvetica, "Times New Roman";
+	text-transform: uppercase;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}

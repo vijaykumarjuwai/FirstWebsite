@@ -1,0 +1,29 @@
+Floating Images are having images next to multiple block level tags
+
+The float property lets an inline tags tag up some of the space that block-level tags usually take up.
+
+	To Do, put the img, h3, and p all in one li and float the img left.
+
+	*HTML*
+	<ul class="recipes">
+		<li>
+			<img src=...> 
+			<h3><a href=...>Magic Cake</a></h3> 
+			<p>...</p> 
+		</li> 
+	 </ul>
+
+	 *CSS*
+
+	 .recipes img{
+	 	float: left;
+	 }
+
+	 This makes the image take up some of the left space that the h3 and p boxes would normally eat up as block-level tags.
+
+	 Success! We’ve also added some right padding so the image doesn’t touch right up against the text.
+
+	  .recipes img{
+	 	float: left;
+	 	padding-right: 10px;
+	 }

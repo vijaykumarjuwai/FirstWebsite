@@ -1,0 +1,113 @@
+New Input Types in HTML 5
+
+		HTML5 provides several new input types:
+			๏ Search
+			๏ Email
+			๏ URL
+			๏ Tel
+			๏ Number
+			๏ Range
+			๏ Month
+			๏ Week
+			๏ Time
+			๏ Datetime
+			๏ Datetime-local 
+			๏ Color
+			๏ Date
+
+		If a browser doesn’t support the input type, it defaults to “text.”
+
+
+	Search: The input element with a type attribute whose value is "search" represents a one-line plain-text edit control for entering one or more search terms.
+
+		<input type="search" />
+
+	Email: The email input looks just like a regular text input, but with added usability on mobile devices.
+
+		<input type="email" />
+
+	URL: The url input looks just like a regular text input, but with added usability on mobile devices.		
+
+			<input type="url" />
+
+	Date: The input element with a type attribute whose value is "date" represents a control for setting the element’s value to a string representing a date.	
+
+		 <input type="date" />
+
+	Tel: Again, the tel input looks just like a regular text input, but with added usability on mobile devices.
+
+		<input type="tel" />
+
+	Number: The input element with a type attribute whose value is "number" represents a precise control for setting the element’s value to a string representing a number.
+
+		<input type="number" />
+
+	Range: The input element with a type attribute whose value is "range" represents an imprecise control for setting the element’s value to a string representing a number.
+
+		 <input type="range" />
+
+	Month, Week:
+
+		<input type="month" />
+		<input type="week" />	
+
+	Time, Datetime-Local: The input element with a type attribute whose value is "datetime-local" represents a control for setting the element’s value to a string representing a local date and time (with no timezone information).
+
+		<input type="time" />
+		<input type="datetime-local" />	 
+
+	Color: The input element with a type attribute whose value is "color" represents a color-well control, for setting the element’s value to a string representing a simple color.	
+
+		<input type="color" />	
+
+New Form Elements:
+
+	HTML5 provides new form elements:
+		Datalist 
+		Keygen 
+		Output	
+
+	Datalist: The datalist element represents a set of option elements that represent predefined options for other controls.
+	
+		<input type="text" list="browsers" />
+
+		<input type="text" list="browsers" />	*NOTE* the list= & the datalist id= need to match for this to run 
+		<datalist id="browsers"> 					   properly.
+			  <option value="Chrome">
+			  <option value="Firefox">
+			  <option value="Internet Explorer">
+			  <option value="Opera">
+			  <option value="Safari">
+		</datalist>	
+
+			Here the option values are what is available to the input.
+
+New Form Attributes: 
+
+	HTML5 provides several new form attributes: [This training will focus on Placeholder, Autofocus, Aequired, & Pattern]
+		๏ Placeholder
+		๏ Autofocus
+		๏ Autocomplete ๏ Required
+		๏ Pattern
+		๏ List
+		๏ Multiple
+		๏ novalidate
+		๏ formnovalidate ๏ form
+		๏ formaction
+		๏ formenctype
+		๏ formmethod
+		๏ formtarget
+
+		Placeholder: The placeholder attribute allows you to specify a message that is shown inside the input, hidden when the user starts typing, and then returns when focus is lost on the input (when the input is blank)
+
+			Example usage of placeholder attribute: <input type="text" placeholder="Enter your email..." />
+
+		Autofocus: The autofocus attribute will automatically focus the specified input when the page is rendered.
+			<input type="text" autofocus />
+
+		Required: If you add the new HTML5 required attribute to an input, when the form is submitted, the user will be notified of an error if the field is left blank.
+			<input type="text" required />
+
+		Pattern: The pattern attribute accepts a JavaScript regular expression that can be used to validate a form field to match the pattern.
+			<input type="text" pattern="[0-9]{3}" /> *Here we are saying we want the pattern to be 3 0-9 digits.*	
+
