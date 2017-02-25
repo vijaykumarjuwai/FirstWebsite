@@ -1,0 +1,59 @@
+Fluid Layouts:
+
+	*HTML*
+	<h1>
+	  It is quite a three pipe problem.
+	  <a href="#">Please get me a pipe.</a>
+	</h1>
+
+	*CSS*
+	h1 {
+  		font-size: 30px;
+  		font-weight: bold;
+	}
+
+	Converting Pixels to ems:
+
+	 html {
+  		font-size: 16px;
+	}
+
+	body {
+	  color: #352a25;
+	  font-family: Georgia, serif;
+	  font-size: 62.5%; /* 1em = 10px */
+	}
+
+	**In the above we set a font-size for the html to give the browser something to work with and then in the body we set the font-size to be a proportion of the html font size-specifically we set the font-size to be 62.5% of the original font-size of 16px. This gives us a font-size in the body of 10px.
+
+	em: target ÷ context = result
+
+	em example: 30px [targer font size] ÷ 10px [default browser font size] = 3em
+
+	Fluid Layout: 
+
+		h1 {
+  			font-size: 3em; /* 30px/10px */
+  			font-weight: bold;
+		}
+
+	Fluid Layout Transformation: need to convert the font-size to em
+	
+	h1 a {
+		font-size: 14px;
+		text-transform: uppercase;
+		text-decoration: none;
+		color: #6C564B;	
+  	}
+
+  	The value we need to set ems at is calculated thusly: target ÷ context = result
+  	The value we need to set ems at is calculated thusly: target[14px] ÷ 10px [default browser font size]=1.4em 
+  	1.4em is the adjusted display size.
+
+  		h1 a {
+		font-size: 1.4em; /*14px÷10px*/
+		text-transform: uppercase;
+		text-decoration: none;
+		color: #6C564B;	
+  		}
+
