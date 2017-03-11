@@ -131,6 +131,8 @@ Uploading content to GitHub
 4: once inside my folder, type: “git add .”
 5: after typing “git add .” type “git commit -m “my message””
 
+NOTE: if you see the X just add it again.
+
 
 
 
