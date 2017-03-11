@@ -1,0 +1,72 @@
+Flexbox is a collection of CSS properties used to align content and distribute space
+
+	Flexbox adds flex containers, flex items, and flexlines in addition to new properties
+	NOTE the block of changing layout in flexbox is done by changing the properties of the parent elements.
+
+			Current layout
+		Block layout
+		Table layout
+		Inline layout
+		Position layout
+
+			Flex layout
+		Flex containers
+		Flex items
+		Flex lines
+
+	Flex containers control the layout of Child Items
+
+		*HTML*
+
+		<article class="setup">This . . . 
+			<img height="150" height="150" . . .>
+			<p> . . .</p>
+		</article>		
+
+		*CSS*
+
+		article {
+			border: 1px solid #d1eda6;
+			display: flex
+		}
+
+	display: flex 
+		Creates a Block-level Container which contains all available width.	
+
+	display: inline-flex
+		Creates an Inline Container
+
+		*HTML*
+
+		<article class="setup">This . . . 
+			<img height="150" height="150" . . .>
+			<p> . . .</p>
+		</article>		
+
+		*CSS*
+
+		article {
+			border: 1px solid #d1eda6;
+			display: inline-flex
+		}
+
+	Flex Items are Distributed Along Flex Lines
+		Flex Items are direct children of a flex container and can be HTML elements or text.
+		A spacing algorithm is used to distributed space of all flex items across a single flex line.
+
+				*HTML*
+
+		<article class="setup">This . . . 
+			<img height="150" height="150" . . .>
+			<p> . . .</p>
+		</article>		
+
+		*CSS*
+
+		article {
+			border: 1px solid #d1eda6;
+			display: inline-flex
+		}
+
+	Grouping Elements Into Flex Items:
+		Grandchild elements do not become flex items.	

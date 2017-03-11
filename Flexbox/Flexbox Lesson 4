@@ -1,0 +1,9 @@
+Justification and Order
+	Changing the Order of Items with CSS
+
+	Display position can be changed with CSS
+		Order is used to determine the order of flex items along the main axis. It defaults to 0 and accepts positive & negative #s.
+
+		Using a negative # displays an item first, based on the "flex-direction."
+
+		Order changes the position of items along the main axis of the column.

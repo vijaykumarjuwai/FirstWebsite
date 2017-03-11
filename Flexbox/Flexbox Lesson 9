@@ -1,0 +1,18 @@
+Grouping Multiple Properties Into a Single Property.
+
+	flex: shorthand property used to set values for "flex-grow," "flex-shrink," and "flex-basis." The default is: 0 1 auto.
+
+	*CSS*
+
+		.flex{
+			flex: 0 (grow) 1 (shrink) auto (basis);
+		}
+
+	flex-flow: shorthand property used to set values for "flex-direction" and "flex-wrap." The default is: row, nowrap.
+	
+	*CSS*
+		.flex {
+			flex-flow: row (direction) nowrap (wrap)
+		}
+
+			

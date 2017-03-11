@@ -1,0 +1,60 @@
+A breakpoint is the size of a browswer where we need to change the CSS
+
+The Mobile First Approach: Focus on the most important things:
+	Simplify content 
+	Prioritize layout 
+	Optimize user experience
+
+Responsive VS. Adaptive:
+	All Responsive are Adaptive 
+	Not all Adaptive are Responsive	
+
+Responsive Design: content defines break points
+
+Advanced Media Queries:
+
+Feature Name:				Definition:							Has min- & -max prefixes	
+Width 				The width of the display area							Yes
+
+Height:				The height of the display area							Yes
+
+Device-Width		The width of the devices rendering						Yes 
+					surface
+
+Device-Height		The height of the device's rendering					Yes
+					surface
+
+Orientation			Accepts portrait or landscape							No
+					values								
+
+Aspect-ratio		Ratio of the display area's width over height.			Yes
+					For example: on a desktop, you'd be able to query
+					if the browser window is at a 16:9 aspect ratio
+
+Device-aspect-		Ratio of the devices rendering surface width over		Yes
+ratio				its height. For example: on a desktop you'd be able
+					to querty if the screen is at a 16:9 aspect ratio	
+
+Color				The # of bits per color component of the the device.	Yes
+					For example, an 8-bit color would successfully pass
+					a query of (color: 8). Non-color devices should return
+					a value of 0.
+
+Color-index			The # of entries in the color lookup table of the 		Yes
+					output device. For example, @media screen and 
+					(min-color-index: 256).	
+
+Monochrome			Similar to color, the monochrome feature lets user      Yes
+					test the number of bits per pixel in a Monochrome
+					device
+
+Resolution			Tests the density of the pixels in the device, such as  Yes
+					screen and (resolution: 72dpi) or screen and 
+					(max-resolution: 300dpi)
+
+Scan				For tv-based browing measures whether the scanning 		No
+					process is either progressive or scan.	
+
+Grid				Tests whether the device is a grid based display, 		No
+					like feature phones with 1 fixed-width font. Can
+					be expressed simply as (grid)																															

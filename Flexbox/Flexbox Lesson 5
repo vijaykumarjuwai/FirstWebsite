@@ -1,0 +1,27 @@
+Aligning Alibis
+	Distributing Space Between Items
+
+	The cross axis is perpendicular to the main axis.
+
+		In the column direction, the main axis is verticle, and the cross axis is horizontal.
+
+		In the row direction, the main axis is horizontal, and the cross axis is vertical.
+
+		Align-items
+			Used to align content on the cross axis, the default value is stretch and it accepts: stretch, flex-start, flex-end, center, and baseline.
+
+			Align-items: stretch fills available space.
+
+		Flex-Start is where the cross-axis meets the main-axis.
+		
+		Flex-End is where the cross-axis is furtherest from the main-axis.
+
+		Baseline & Center
+			Align-items: baseline; pushs items as far away form the main-axis as possible
+
+			Align-items: center: puts items in the middle of the cross-axis
+
+		Align-items: center; items are centered on the cross-axis	
+
+
+

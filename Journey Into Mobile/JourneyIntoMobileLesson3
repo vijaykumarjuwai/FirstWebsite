@@ -1,0 +1,141 @@
+Adaptive Web Design: Design for controlled adaptation- you know the device or design context you need to design for and then you design accordingly.
+	Context could be device, screen size, resolution
+
+Designing to meet a speci!c context
+
+	Device 
+	Screen 
+	Size 
+	Resolution
+
+FOUR DESIGN KEYS
+
+	Who Is Your User?
+	How Will They Use The Site? 
+	Context (i.e. what device?) 
+	Content (how will it adapt?)
+
+Adaptive Web Design:
+
+	1: Adaptive Markup
+	2: Break Points: Where your design breaks down-typically the height and width of the target viewport. IE problems occur when the size of the screen changes.
+	
+	3: Media Queries: tells the browser to adjust the css depending on what device is viewing the material. 
+
+
+@media screen *Media Type* and (max-width *The Query itself-I.E. what are the requirements*: 320px) {
+  body {
+    font-size: 100%
+  }
+
+  What the above CSS means is that for any media type where the screen width is 320px or less use the following CSS instead of the original CSS*
+
+  *screen is the media-type & max-width is the query*
+
+@media screen and (min-width: 1024px) {
+  body {
+    font-size: 100%
+  }
+
+  What the above CSS means is that for any media type where the screen width is 1024px or greater use the following CSS instead of the original CSS*
+
+   *screen is the media-type & max-width is the query*
+   
+   @media screen and (max-width: 480px) {
+ }  
+
+Media queries should be put in a list at the bottom of the main stylesheet.
+ 
+Media Queries: Desktop:
+
+	h1 {
+	  background: url(images/logo.png) no-repeat;
+	  height: 84px;
+	  text-indent: -9999em;
+	  width: 308px;
+	}
+	header {
+	  border-bottom: 15px solid #26343e;
+	  padding: 25px 0;
+	} 
+
+	.logo {
+	  float: left;
+	}
+	.location {
+	  float: right;
+	}
+	.addy {
+	  float: left;
+	}
+	.mappy {
+	  float: right;
+	  text-align: center;
+	  width: 270px;
+	}
+
+Media Queries: Mobile:
+
+	@media screen and (max-width: 480px) {
+	h1 {
+	  background: url(images/logo_s.png) no-repeat;
+	  height: 80px;
+	  margin: 0 auto;
+	  text-indent: -9999em;
+	  width: 295px;
+
+	}
+	header {
+	  border-bottom: none;
+	  padding: 0px;
+	}
+	}	
+
+
+	  min-height: 425px;
+	  width: 41.666667%; /* 400px/960px */
+	}
+	/* ----- Beverages ----- */
+	.beverages {
+	  float: left;
+	}
+	/* ----- Cuisine ----- */
+	.cuisine {
+	  float: right;
+	}
+
+	@media screen and (max-width: 480px) {
+	.logo {
+	  float: none;
+	  margin: 0 auto;
+	  text-align: center;
+	}
+	.location {
+	  background-color: #26343e;
+	  float: none;
+	  margin: 0 auto;
+	  text-align: center;
+	}
+	.addy {
+	  float: none;
+	}
+	.mappy {
+	float: none;
+	  width: 100%;
+	}
+	.box {
+
+	@media screen and (max-width: 480px) {
+	.box {
+	  margin: 20px auto;
+	  min-height: 0px;
+	  width: inherit;
+	}
+	/* ----- Beverages ----- */
+	.beverages {
+	  float: none;
+	}
+	/* ----- Cuisine ----- */
+	.cuisine {
+	  float: none;
+	}

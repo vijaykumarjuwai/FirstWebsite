@@ -32,7 +32,119 @@ Github notes:
 background is efficient but not flexible for images.
 
 look up whole page background image css-use a property called cover but look it up.
-
+g
 look at the website can I use. com to see what browsers support a given property
+
+
+	3/11/17
+
+in sublime with an html file.
+html:5 hit tab will create the html5 basic set up
+
+div.any class name + tab will create a div with that class name
+
+	Process for making a website
+
+1: outline the website on paper for multiple scenarios and start mobile first.-no details-start from a small screen and go to big a screen.
+	Start by designing from a small screen then up, its easier to expand content and then to delete content.
+		Look up the paradigm of mobile-first CSS design.
+2: Make the outline in CSS using boxes give everything a property of border 1px solid
+3: Get your font-family and font-sizes. Set typography after outline.-set the sizes of your h1-h5 & p
+4: Set your color gradient/palette-make sure your website has a single color gradient-no distracting color
+	look up website of website of color palette
+		Setting the color palette gets the distractions out of the way. 
+————————
+
+	FONTS & FONT-FAMILY
+
+Look into google settings and fonts to see the font-settings.
+
+	REM font-sizes-REM looks up the root font-size for the html document-can be from the browser or from your own settings and then sets its size in relationship to that
+
+font-size #rem sets the font-size in relationship to the settings
+
+*CSS*
+
+html {
+	font-size: 1rem;
+}
+
+This means the font-size will match the default size of the browser.
+
+
+*CSS*
+
+html {
+	font-size: 2rem;
+}
+
+This means the font-size will DOUBLE the default size of the browser.
+
+Always start by setting everything to the default font size of the browser.
+
+To make the gibbersh text show up. type: lipson20 + tab
+
+you can also have rem in decimals so 1.5rem.
+
+
+rem always refers to the root font-size as defined by the browser.
+
+
+	EM font-sizes
+
+what em does WITH FONT SIZES will always relate itself to its parent. If set the font-size of a child as 2em, it will look the font-size of its parent container and double that.
+
+	VIEW HEIGHT & VIEW WIDTH this should be used to set the size for large container-for stuff that inside to 
+
+*CSS
+
+.container {
+	width: 80vw
+}
+
+	using vw is view port width: this will set the width of an object to whatever % you want of the view port
+	using vh is view port height: this will set the height of an object to whatever % you want of the view port
+
+
+	em-are used to make the image mobile ready since it adjusts the sizes of its container.
+	absolute-is used when you always want something to be a fixed size.
+
+	ABSOLUTE VS. RELATIVE Sizing
+
+	Position relative vs. position fixed.
+
+	NOTE: When sizing with width and height the em refers to the root default size, when using em for font-sizes it refers to parents
+
+
+	Put something absolute inside something relative.
+		The child should be positioned in relationship to its parent.
+		When you want the child to be positioned relative to its parent make its PARENTS POSITION Relative. When give a container/tag the positive property relative this means its children will be positioned relative to it. You also need to make the child position absolute to let the CSS know that the position will be absolute in relationship to the parent.
+
+	using the property left & top right bottom you can set the distance away from the parent. therefore if you say left 10px. the box will be 10px away from the left side of the parent. If you set the left/top/right/bottom property to 0 it will touch the edge. 
+
+Uploading content to GitHub
+
+1: iTerm2
+2: go to my folder: type: “cd foldername”
+	2a: to check folder names type: “ls”
+3: hit enter.		
+4: once inside my folder, type: “git add .”
+5:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

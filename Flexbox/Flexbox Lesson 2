@@ -1,0 +1,78 @@
+Flexbox Wrapping and Direction Examples
+
+		Displaying flex items across multiple lines
+		Changing the direction of flex lines
+		Distributing space vertically
+
+	Problem: Wanting Flex Items to Stack-Solution: flex-wrap	
+
+	*HTML*
+
+	<article class="clue">
+		<img height="150" height="150" . . .>
+		<div>
+			<h3> . . . </h3>
+			<p> . . . </p>
+			<h3> . . . </h3>
+			<p> . . . </p>	
+		</div>
+	</article>
+
+	flex-wrap: this property's default value is nowrap and it accepts: nowrap, wrap, wrap-reverse.
+
+	*HTML*
+
+	<article class="clue">
+		<img height="150" height="150" . . .>
+		<div>
+			<h3> . . . </h3>
+			<p> . . . </p>
+			<h3> . . . </h3>
+			<p> . . . </p>	
+		</div>
+	</article>	
+
+	*CSS*
+	.clue {
+		border: 1px solid #d1eda6
+		display: flex;
+		flex-wrap: wrap;
+	}	
+
+	Using this property will help text align more pleasingly.
+
+	Using flex-wrap: wrap-reverse; will reverse the order that items are displayed
+
+	Problem: Wanting Flex Items to always Stack-Solution: Flex-direction
+
+		The default value is row & accepts row, row-reverse, column, column-reverse.
+
+	*HTML*	
+		<main>
+			<img  . . .>
+			<h1> . . . </h1>
+			<p>  . . . </p>
+			<a> . . . </a>
+		</main>
+	
+	*CSS*
+		main {
+			display: flex;
+			flex-direction: column;
+		}
+
+	Mixing in some non-flexbox CSS
+		Setting the page elements to  100% height uses all available space.
+
+	*HTML*	
+		<main>
+			<img  . . .>
+			<h1> . . . </h1>
+			<p>  . . . </p>
+			<a> . . . </a>
+		</main>
+	
+	*CSS*
+		html, body,main {
+			height: 100%;
+		}		

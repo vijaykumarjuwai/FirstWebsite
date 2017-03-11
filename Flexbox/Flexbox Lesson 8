@@ -1,0 +1,16 @@
+Property Plotting: Aligning Content in Edge Cases
+
+	align-self: used to align individual flex items by overriding the align-items value. The default value is stretch and it accepts:
+		stretch, flex-start, flex-end, center, baseline.
+
+		If you use "stretch" the contents will stretch across the cross axis.
+
+		If you use "center" the content will center on the cross axis.
+
+	Controlling Page Layout with flex-wrap
+		With flex wrap each item defaults to stretch.
+
+		NOTE align items doesn't control wrapped items.
+
+	Align-content: used to align wrapped flex items. The default value is stretch and it accepts: stretch, flex-start, flex-end, center, space-between, space-around.	
+

@@ -1,0 +1,207 @@
+* { 
+	padding: 0; 
+  	border: 0; 
+  	margin: 0;
+}
+
+body {
+	background-color: #fefdfb;
+	margin: 0 auto 0 auto;
+	font-family: Helvetica, Arial, sans-serif;
+	background-image: url(images/washi.png);
+	background-repeat: repeat
+}
+
+.homepage .header {
+	background-color: #000000;
+	padding: 10px 0 10px 10px;
+}
+
+.trainingproducts .header {
+	background-color: #000000;
+	padding: 10px 0 10px 10px;
+}
+
+.teammembers .header {
+	background-color: #000000;
+	padding: 10px 0 10px 10px;
+}
+
+.header h1 { 
+	margin: 10px 0 15px 0;
+	background-color: #000000;
+	color: #ffffff;
+	text-align: center;
+}	
+
+.header a {
+	display: inline;
+	background-color: #000000;
+	color: #ffffff;
+	text-decoration: none;
+}	
+
+.header a:hover {
+	text-decoration: underline;
+	color: darkturquoise;
+		}	
+
+.nav {	
+	background-color: #000000;
+	text-align: center;
+}
+
+.nav li {
+	display: inline;
+	background-color: #000000;
+	color: #ffffff;
+	padding: 0 5px 0 5px;
+}	
+
+.nav a {
+	display: inline;
+	background-color: #000000;
+	color: #ffffff;
+	text-decoration: none;
+}		
+
+.nav a:hover {
+	text-decoration: underline;
+	color: darkturquoise;
+		}	
+
+.content {
+	margin: 10px auto 0 auto;
+	padding: 10px;
+	color: #000000;
+}
+
+.content h2 {
+	margin: 10px 0 20px 0;
+	text-align: center;
+}
+
+.content h3{ 
+	margin: 15px 0 15px 0;
+	border-bottom: 1px solid #CCCCCC;
+	padding-bottom: 3px;
+}	
+
+.content p{
+	padding-left: 25px;
+}
+
+.trainingcontent{
+	margin: 15px 0 0 0;
+}
+
+.SAT, .ACT, .TOEFL, .IELTS {
+	margin: 5px 5px 0 5px;
+	padding: 10px;
+	color: #000000;
+	border-bottom: 1px solid #CCCCCC;
+}
+
+.SATul{
+	list-style-type: none; 
+}
+
+.act_logo, .sat_logo, .toefl_logo, .ielts_logo{
+	border-radius: 5px;
+	float: left;
+}
+
+
+.act_header{
+	float: left;
+	margin-right: 35px;
+	background: url(images/logos/ACT_logo_combo.png);	
+	height: 159px;
+	width: 608px;
+	display: block;
+	text-indent: -9999px;
+}
+.act_header:hover, .act_header:focus{
+	background-position: 0 -159px;
+}
+
+.actcontentbody{
+	background-image: url(images/washi.png);
+	background-repeat: repeat
+	padding-bottom: 100px;
+}
+
+.actcontent{
+	padding: 10px 25px 10px 25px;
+	border-style: solid;
+	border-color: black;
+}
+
+.actcontent h3{
+	padding-bottom: 5px;
+	margin-bottom: 5px;
+	border-bottom: 1px solid #CCCCCC;
+}
+
+.actcontent ul{
+	padding-left: 30px;
+	list-style-type: none; 
+}
+
+.sat_header{
+	float: left;
+	margin-right: 35px;
+	background: url(images/logos/sat_logo_combo.png);	
+	height: 159px;
+	width: 200px;
+	display: block;
+	text-indent: -9999px;
+}
+.sat_header:hover, .sat_header:focus{
+	background-position: 0 -200px;
+}
+
+.toefl_header{
+	float: left;
+	margin-right: 35px;
+	background: url(images/logos/toefl_logo_combo.png);	
+	height: 200px;
+	width: 200px;
+	display: block;
+	text-indent: -9999px;
+}
+.toefl_header:hover, .toefl_header:focus{
+	background-position: 0 -200px;
+}
+
+.ielts_header{
+	float: left;
+	margin-right: 35px;
+	background: url(images/logos/ielts_logo_combo.png);	
+	height: 200px;
+	width: 200px;
+	display: block;
+	text-indent: -9999px;
+}
+.ielts_header:hover, .ielts_header:focus{
+	background-position: 0 -200px;
+}
+
+.geri, .sherry{
+	list-style-type: none; 
+	}
+
+.geri {
+	padding-bottom: 30px;
+}
+
+.gallery{
+	padding-bottom: 30px;
+}
+
+.geri img, .sherry img{
+	float:left;
+	margin-right: 35px;
+	border-radius: 15px;
+}
+

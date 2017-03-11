@@ -1,0 +1,15 @@
+Justification & Order: Distributing Space Along Flex LInes
+
+	Flex Items are Distributed Along Axes
+		The main axis is determined by the "flex-direction"
+
+	Justify-content
+		used to distributed space on the main axis, the default value is "flex-start"and it accepts: flex-start, flex-end, center, space-between, space-around.
+
+	Adding Space With Non-flexbox CSS
+		Margin & padding can be applied to flex items.
+
+	Justifying Content in a column.
+		Main elements for layout are flex items with the column direction.
+
+				

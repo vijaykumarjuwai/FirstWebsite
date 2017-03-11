@@ -1,0 +1,16 @@
+Sizing Up the Properties
+	New Property for Setting Width Values.
+
+	A challenge with flex-items is setting defined widths for flex-items.
+
+	flex-basis is used to specify the initial size of a flex item. It defaults auto & current supports CSS units: %, px, em, rem etc.
+
+	Combining flex-basis & flex-shrink:
+		With one item set to pixel-based value, the other will adjust to fill the remaining space.
+
+	Using flex-basis & absolute units.
+		Items with flex-baiss that is an absolute unit will not grow beyond the value by default.
+
+		Items with a relative flex-basis will grow to fill the space.
+
+			

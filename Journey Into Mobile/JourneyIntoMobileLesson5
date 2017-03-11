@@ -1,0 +1,70 @@
+Responsive Images:
+
+1: Save our larger images
+
+2: Use max-width
+
+img {
+	max-width: 100%;
+}
+
+*This means we can take a large hi-res image and when we put it in smaller containers it will automatically just fill up the full smaller container-resulting in a higher res image. As the container scales up and down the image will also scale up and down. We should have an extra large original image so our scaling image will be clear.
+
+2: Use max-width
+
+about img{
+	width: 29.6875%;
+}
+
+img,
+embed,
+object,
+video {
+  max-width: 100%;
+}
+
+Retina Images
+
+When dealing with retina screens do not double the image-size instead use a media query to target these specific devices.
+
+@media
+only screen and (-webkit-min-device-pixel-ratio: 1.5),
+only screen and (min-device-pixel-ratio: 1.5) {
+/* Styles */
+}
+
+/* ORIGINAL CSS */
+.logo {
+  background-image: url(images/logo.png) no-repeat;
+}
+
+@media
+only screen and (-webkit-min-device-pixel-ratio: 1.5),
+only screen and (min-device-pixel-ratio: 1.5) {
+.logo {
+    background-image: url(logo@2x.png);
+    -webkit-background-size: 12px 16px;
+    background-size: 12px 16px;
+  } }
+
+<picture alt="Our Alternate Text">
+  <!-- Smallest size first - no @media qualifier -->
+  <source src="content-image.jpeg" />
+  <!-- Large size - send to viewports 800px wide and up -->
+  <source src="content-image-lrg.jpeg" media="(min-width:
+ 800px)" />
+</picture> 
+
+<picture alt="Our Alternate Text">
+  <!-- Smallest size first - no @media qualifier -->
+  <source src="content-image.jpeg" />
+  <!-- Large size - send to viewports 800px wide and up -->
+  <source src="content-image-lrg.jpeg" media="(min-width:
+ 800px)" />
+<!-- Fallback content for non-JS or non-media-query-
+supporting-browsers -->
+<noscript>
+  <img src="content-image.jpeg" alt="Our Alternate
+ Text" />
+  </noscript>
+</picture>

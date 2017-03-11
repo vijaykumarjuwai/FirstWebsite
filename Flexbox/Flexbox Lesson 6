@@ -1,0 +1,30 @@
+Sizing Up the Properties
+	New Properties for Space-based Size.
+
+	Examples, Sized with Flex Properties
+
+	flex-grow: used to specify the ratio of the space an item should fill in the main axis. It accepts #s and the default is 0.
+
+	Using flex-grow for a Single Item.
+		Assigning a value of 1 makes an item fill as much space as possible.
+
+		Assigning a value of 1 to multiple properties will have them all try to fill as much space as possible.
+
+	Using flex-grow with Empty Containers
+		Empty flex containers will divide the space according to the ratio.
+
+	Using flex-grow with Same-sized content:
+		Content alters how the algorithm divides space.
+
+	Using flex-grow With Uneven Content
+		Content with different widths will affect the ratio size.
+
+	PROBLEM: We want to resize the text item, but not the image.
+	
+	Flex-shrink: used to specify the "shrink factor" of a flex item. It accepts #s and the default is 1.
+
+	flex-shrink: 0 in action.
+
+		The .clue-img div remains the same size.
+
+				
