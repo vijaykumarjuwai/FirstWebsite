@@ -129,7 +129,7 @@ Uploading content to GitHub
 	2a: to check folder names type: “ls”
 3: hit enter.		
 4: once inside my folder, type: “git add .”
-5:
+5: after typing “git add .” type “git commit -m “my message””
 
 
 
