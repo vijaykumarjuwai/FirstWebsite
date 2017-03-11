@@ -130,6 +130,7 @@ Uploading content to GitHub
 3: hit enter.		
 4: once inside my folder, type: “git add .”
 5: after typing “git add .” type “git commit -m “my message””
+6: next type:  “git push -u origin master” to push the new content onto GitHub.
 
 NOTE: if you see the X just add it again.
 
