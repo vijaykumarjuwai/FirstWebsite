@@ -15,4 +15,87 @@ Grouping Multiple Properties Into a Single Property.
 			flex-flow: row (direction) nowrap (wrap)
 		}
 
-			
+Various types of flex-short:
+
+*CSS*
+
+Single # only assigns the grow value.
+
+.flex{				
+	flex: 1;}
+	=
+.flex-item{
+	flex-grow: 1
+	flex-shrink: 1; [1 is the default value for the flex-shrink property]
+	flex-basis: 0;
+}	
+
+2 #s assign the grow, shrink values.
+
+.flex {
+	flex: 1 0;
+}
+
+.flex-item{
+	flex-grow: 1;
+	flex-shrink: 0; [NOTE 0 is NOT the default value for the flex-shrink property]
+	flex-basis: 0;
+}
+
+Single # and a measurement:
+	.flex{
+		flex: 1 47.5%
+	}
+		=
+	.flex-item{
+		flex-grow: 1,
+		flex-shrink: 1; [1 is the default value for the flex-shrink property]
+		flex-basis: 0;
+	}	
+
+Flex set to none
+	.flex{
+		flex: none; [Ultimately this treats the item like its not a flex-item at all.]
+	}
+	=
+	.flex-item{
+		flex-grow: 0; [0 is the default value for the flex-grow property]
+		flex-shrink: 0; [NOTE 0 is NOT the default value for the flex-shrink property]
+		flex-basis: auto; [auto is the default value for the flex-grow property] 
+	}
+
+Flex-flow: The shorthand property used to set values for flex-direction & flex-wrap. The default is: row nowrap
+
+*CSS*
+
+.flex-item{
+	flex-direction: row; [ROW is the default value of flex-direction]
+	flex-wrap: nowrap; [NOWRAP is the default value of flex-wrap]
+}	
+
+=
+
+.flex{
+	flex-flow: row nowrap;
+}
+
+SPECIFICATIONS:
+
+	.flex {
+		flex-flow: column;
+	}
+	=
+	.flex-item{
+		flex-direction: column;
+		flex-wrap: nowrap [NOWRAP is the default value of flex-wrap]
+	}
+
+
+	.flex {
+		flex-flow: wrap;
+	}
+	=
+	.flex-item{
+		flex-direction: row [ROW is the default value of flex-direction]
+		flex-wrap: wrap;
+	}

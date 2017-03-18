@@ -1,6 +1,8 @@
 Aligning Alibis
 	Distributing Space Between Items
 
+	Flex items are also aligned along a cross axis which is perpendicular to the main axis. So in the COLUMN direction, the cross-axis is horizontal and in the RROWow Direction, the cross axis is horizontal.
+
 	The cross axis is perpendicular to the main axis.
 
 		In the column direction, the main axis is verticle, and the cross axis is horizontal.

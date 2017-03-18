@@ -3,12 +3,42 @@ Sizing Up the Properties
 
 	Examples, Sized with Flex Properties
 
-	flex-grow: used to specify the ratio of the space an item should fill in the main axis. It accepts #s and the default is 0.
+	flex-grow: used to specify the ratio of the space an item should fill in the main axis. It accepts #s and the default is 0. Default means dont grow. Items stay default content size.
+
+	*HTML*
+	<div . . .>
+		<label . . .> . . . </label>
+		<input class="add-input">
+		<button . . .> . . .</button>
+	</div>
+	
+	*CSS*
+	.add-input{
+		flex-grow: 1;
+	}	
+
+		The flex-grow value of 1 means that an item will fill as much space. Specifically the size of its container minus the space necessary for the other flex items.
 
 	Using flex-grow for a Single Item.
 		Assigning a value of 1 makes an item fill as much space as possible.
 
 		Assigning a value of 1 to multiple properties will have them all try to fill as much space as possible.
+
+	Using flex-grow for Multiple Items:
+	
+	*HTML*
+	<div . . .>
+		<label class="add-label"> . . . </label>
+		<input class="add-input">
+		<button class="add-button"> . . .</button>
+	</div>
+	
+	*CSS*
+	.add-input, .add-button, .add-label{
+		flex-grow: 1;
+	}	
+
+		Here doing this will make the each item in the container attempt to fill all the space of the said container.
 
 	Using flex-grow with Empty Containers
 		Empty flex containers will divide the space according to the ratio.

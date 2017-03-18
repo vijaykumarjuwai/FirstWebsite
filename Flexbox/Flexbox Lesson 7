@@ -1,6 +1,12 @@
 Sizing Up the Properties
 	New Property for Setting Width Values.
 
+	In order to make a 2 column layout we need to set consistent widths.
+
+	Flex-basis property: specifies the initial size of the flex-item. Before any available space is distributed according to the flex factors. This basically sets the original size of a flex item: can be defined as %, px, em, rem etc. 
+
+	when you use pixels the size is fixed it will not grow or shrink. If you use %/ems it will adjust to the size of its container.
+
 	A challenge with flex-items is setting defined widths for flex-items.
 
 	flex-basis is used to specify the initial size of a flex item. It defaults auto & current supports CSS units: %, px, em, rem etc.

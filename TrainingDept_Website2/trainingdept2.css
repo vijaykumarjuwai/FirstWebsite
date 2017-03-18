@@ -20,6 +20,22 @@ html{
 	margin-bottom: 1em;
 }
 
+.header .title_logo{
+	float: left;
+}
+
+.nav{
+	height: 96px;
+	align-items: center;
+	padding: 1em;
+	display: inline-flex;
+	justify-content: space-between;
+	margin-right: 1em;
+}
+
+.nav a{
+	margin: 0 0.5em;
+}
 .title{
 	padding-top: 0.5em;
 	padding-left: 0.5em;

@@ -4,6 +4,26 @@ Justification and Order
 	Display position can be changed with CSS
 		Order is used to determine the order of flex items along the main axis. It defaults to 0 and accepts positive & negative #s.
 
+		Every item in a flex-box has a default position value of 0, when it has a value of 0 it displays in its source order.
+
+*HTML*
+	<nav>
+		<a class="nav-brand"> 
+		<a class="nav-clues"> 
+		<a class="nav-suspects"> 
+	</nav>	
+
+*CSS*
+	.nav-clues {
+	order: -1;
+	}	
+
+	Setting .nav-clues to have an order value of -1 makes .nav-clues display before all items with their default order value of 0. 
+		When this is in row something with a value of -1 will display to the left of all items with an order value of 0
+
+		When this is in column something with a value of -1 will display below all the items with an order value of 0.
+
+
 		Using a negative # displays an item first, based on the "flex-direction."
 
 		Order changes the position of items along the main axis of the column.

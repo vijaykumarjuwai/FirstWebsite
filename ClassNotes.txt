@@ -1,4 +1,4 @@
-CSS Rules
+C£CSS Rules
 
 ID (#Gallery) will overide class (.gallery) and class will overide tag (body)
 
